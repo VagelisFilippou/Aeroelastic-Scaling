@@ -1,0 +1,1503 @@
+sys_poll_option( 2 )
+ga_group_create( "SPL" )
+
+ga_group_entity_add( "SPL", "Node 1224" )
+
+ga_group_entity_add( "SPL", "Node 1278" )
+
+ga_group_entity_add( "SPL", "Node 1332" )
+
+ga_group_entity_add( "SPL", "Node 1386" )
+
+ga_group_entity_add( "SPL", "Node 1440" )
+
+ga_group_entity_add( "SPL", "Node 1494" )
+
+ga_group_entity_add( "SPL", "Node 1548" )
+
+ga_group_entity_add( "SPL", "Node 1602" )
+
+ga_group_entity_add( "SPL", "Node 1656" )
+
+ga_group_entity_add( "SPL", "Node 1710" )
+
+ga_group_entity_add( "SPL", "Node 1764" )
+
+ga_group_entity_add( "SPL", "Node 1818" )
+
+ga_group_entity_add( "SPL", "Node 1872" )
+
+ga_group_entity_add( "SPL", "Node 1926" )
+
+ga_group_entity_add( "SPL", "Node 1980" )
+
+ga_group_entity_add( "SPL", "Node 2034" )
+
+ga_group_entity_add( "SPL", "Node 2088" )
+
+ga_group_entity_add( "SPL", "Node 2142" )
+
+ga_group_entity_add( "SPL", "Node 2196" )
+
+ga_group_entity_add( "SPL", "Node 2250" )
+
+ga_group_entity_add( "SPL", "Node 2304" )
+
+ga_group_entity_add( "SPL", "Node 2358" )
+
+ga_group_entity_add( "SPL", "Node 2412" )
+
+ga_group_entity_add( "SPL", "Node 2466" )
+
+ga_group_entity_add( "SPL", "Node 2520" )
+
+ga_group_entity_add( "SPL", "Node 2574" )
+
+ga_group_entity_add( "SPL", "Node 2628" )
+
+ga_group_entity_add( "SPL", "Node 2682" )
+
+ga_group_entity_add( "SPL", "Node 2736" )
+
+ga_group_entity_add( "SPL", "Node 2790" )
+
+ga_group_entity_add( "SPL", "Node 2844" )
+
+ga_group_entity_add( "SPL", "Node 2898" )
+
+ga_group_entity_add( "SPL", "Node 2952" )
+
+ga_group_entity_add( "SPL", "Node 3006" )
+
+ga_group_entity_add( "SPL", "Node 3060" )
+
+ga_group_entity_add( "SPL", "Node 3114" )
+
+ga_group_entity_add( "SPL", "Node 3168" )
+
+ga_group_entity_add( "SPL", "Node 3222" )
+
+ga_group_entity_add( "SPL", "Node 3276" )
+
+ga_group_entity_add( "SPL", "Node 3330" )
+
+ga_group_entity_add( "SPL", "Node 3384" )
+
+ga_group_entity_add( "SPL", "Node 3438" )
+
+ga_group_entity_add( "SPL", "Node 3492" )
+
+ga_group_entity_add( "SPL", "Node 3546" )
+
+ga_group_entity_add( "SPL", "Node 3600" )
+
+ga_group_entity_add( "SPL", "Node 3654" )
+
+ga_group_entity_add( "SPL", "Node 3708" )
+
+ga_group_entity_add( "SPL", "Node 3762" )
+
+ga_group_entity_add( "SPL", "Node 3816" )
+
+ga_group_entity_add( "SPL", "Node 3870" )
+
+ga_group_entity_add( "SPL", "Node 3924" )
+
+ga_group_entity_add( "SPL", "Node 3978" )
+
+ga_group_entity_add( "SPL", "Node 1224" )
+
+ga_group_entity_add( "SPL", "Node 1278" )
+
+ga_group_entity_add( "SPL", "Node 1332" )
+
+ga_group_entity_add( "SPL", "Node 1386" )
+
+ga_group_entity_add( "SPL", "Node 1440" )
+
+ga_group_entity_add( "SPL", "Node 1494" )
+
+ga_group_entity_add( "SPL", "Node 1548" )
+
+ga_group_entity_add( "SPL", "Node 1602" )
+
+ga_group_entity_add( "SPL", "Node 1656" )
+
+ga_group_entity_add( "SPL", "Node 1710" )
+
+ga_group_entity_add( "SPL", "Node 1764" )
+
+ga_group_entity_add( "SPL", "Node 1818" )
+
+ga_group_entity_add( "SPL", "Node 1872" )
+
+ga_group_entity_add( "SPL", "Node 1926" )
+
+ga_group_entity_add( "SPL", "Node 1980" )
+
+ga_group_entity_add( "SPL", "Node 2034" )
+
+ga_group_entity_add( "SPL", "Node 2088" )
+
+ga_group_entity_add( "SPL", "Node 2142" )
+
+ga_group_entity_add( "SPL", "Node 2196" )
+
+ga_group_entity_add( "SPL", "Node 2250" )
+
+ga_group_entity_add( "SPL", "Node 2304" )
+
+ga_group_entity_add( "SPL", "Node 2358" )
+
+ga_group_entity_add( "SPL", "Node 2412" )
+
+ga_group_entity_add( "SPL", "Node 2466" )
+
+ga_group_entity_add( "SPL", "Node 2520" )
+
+ga_group_entity_add( "SPL", "Node 2574" )
+
+ga_group_entity_add( "SPL", "Node 2628" )
+
+ga_group_entity_add( "SPL", "Node 2682" )
+
+ga_group_entity_add( "SPL", "Node 2736" )
+
+ga_group_entity_add( "SPL", "Node 2790" )
+
+ga_group_entity_add( "SPL", "Node 2844" )
+
+ga_group_entity_add( "SPL", "Node 2898" )
+
+ga_group_entity_add( "SPL", "Node 2952" )
+
+ga_group_entity_add( "SPL", "Node 3006" )
+
+ga_group_entity_add( "SPL", "Node 3060" )
+
+ga_group_entity_add( "SPL", "Node 3114" )
+
+ga_group_entity_add( "SPL", "Node 3168" )
+
+ga_group_entity_add( "SPL", "Node 3222" )
+
+ga_group_entity_add( "SPL", "Node 3276" )
+
+ga_group_entity_add( "SPL", "Node 3330" )
+
+ga_group_entity_add( "SPL", "Node 3384" )
+
+ga_group_entity_add( "SPL", "Node 3438" )
+
+ga_group_entity_add( "SPL", "Node 3492" )
+
+ga_group_entity_add( "SPL", "Node 3546" )
+
+ga_group_entity_add( "SPL", "Node 3600" )
+
+ga_group_entity_add( "SPL", "Node 3654" )
+
+ga_group_entity_add( "SPL", "Node 3708" )
+
+ga_group_entity_add( "SPL", "Node 3762" )
+
+ga_group_entity_add( "SPL", "Node 3816" )
+
+ga_group_entity_add( "SPL", "Node 3870" )
+
+ga_group_entity_add( "SPL", "Node 3924" )
+
+ga_group_entity_add( "SPL", "Node 3978" )
+
+ga_group_entity_add( "SPL", "Node 1233" )
+
+ga_group_entity_add( "SPL", "Node 1287" )
+
+ga_group_entity_add( "SPL", "Node 1341" )
+
+ga_group_entity_add( "SPL", "Node 1395" )
+
+ga_group_entity_add( "SPL", "Node 1449" )
+
+ga_group_entity_add( "SPL", "Node 1503" )
+
+ga_group_entity_add( "SPL", "Node 1557" )
+
+ga_group_entity_add( "SPL", "Node 1611" )
+
+ga_group_entity_add( "SPL", "Node 1665" )
+
+ga_group_entity_add( "SPL", "Node 1719" )
+
+ga_group_entity_add( "SPL", "Node 1773" )
+
+ga_group_entity_add( "SPL", "Node 1827" )
+
+ga_group_entity_add( "SPL", "Node 1881" )
+
+ga_group_entity_add( "SPL", "Node 1935" )
+
+ga_group_entity_add( "SPL", "Node 1989" )
+
+ga_group_entity_add( "SPL", "Node 2043" )
+
+ga_group_entity_add( "SPL", "Node 2097" )
+
+ga_group_entity_add( "SPL", "Node 2151" )
+
+ga_group_entity_add( "SPL", "Node 2205" )
+
+ga_group_entity_add( "SPL", "Node 2259" )
+
+ga_group_entity_add( "SPL", "Node 2313" )
+
+ga_group_entity_add( "SPL", "Node 2367" )
+
+ga_group_entity_add( "SPL", "Node 2421" )
+
+ga_group_entity_add( "SPL", "Node 2475" )
+
+ga_group_entity_add( "SPL", "Node 2529" )
+
+ga_group_entity_add( "SPL", "Node 2583" )
+
+ga_group_entity_add( "SPL", "Node 2637" )
+
+ga_group_entity_add( "SPL", "Node 2691" )
+
+ga_group_entity_add( "SPL", "Node 2745" )
+
+ga_group_entity_add( "SPL", "Node 2799" )
+
+ga_group_entity_add( "SPL", "Node 2853" )
+
+ga_group_entity_add( "SPL", "Node 2907" )
+
+ga_group_entity_add( "SPL", "Node 2961" )
+
+ga_group_entity_add( "SPL", "Node 3015" )
+
+ga_group_entity_add( "SPL", "Node 3069" )
+
+ga_group_entity_add( "SPL", "Node 3123" )
+
+ga_group_entity_add( "SPL", "Node 3177" )
+
+ga_group_entity_add( "SPL", "Node 3231" )
+
+ga_group_entity_add( "SPL", "Node 3285" )
+
+ga_group_entity_add( "SPL", "Node 3339" )
+
+ga_group_entity_add( "SPL", "Node 3393" )
+
+ga_group_entity_add( "SPL", "Node 3447" )
+
+ga_group_entity_add( "SPL", "Node 3501" )
+
+ga_group_entity_add( "SPL", "Node 3555" )
+
+ga_group_entity_add( "SPL", "Node 3609" )
+
+ga_group_entity_add( "SPL", "Node 3663" )
+
+ga_group_entity_add( "SPL", "Node 3717" )
+
+ga_group_entity_add( "SPL", "Node 3771" )
+
+ga_group_entity_add( "SPL", "Node 3825" )
+
+ga_group_entity_add( "SPL", "Node 3879" )
+
+ga_group_entity_add( "SPL", "Node 3933" )
+
+ga_group_entity_add( "SPL", "Node 3987" )
+
+ga_group_entity_add( "SPL", "Node 1233" )
+
+ga_group_entity_add( "SPL", "Node 1287" )
+
+ga_group_entity_add( "SPL", "Node 1341" )
+
+ga_group_entity_add( "SPL", "Node 1395" )
+
+ga_group_entity_add( "SPL", "Node 1449" )
+
+ga_group_entity_add( "SPL", "Node 1503" )
+
+ga_group_entity_add( "SPL", "Node 1557" )
+
+ga_group_entity_add( "SPL", "Node 1611" )
+
+ga_group_entity_add( "SPL", "Node 1665" )
+
+ga_group_entity_add( "SPL", "Node 1719" )
+
+ga_group_entity_add( "SPL", "Node 1773" )
+
+ga_group_entity_add( "SPL", "Node 1827" )
+
+ga_group_entity_add( "SPL", "Node 1881" )
+
+ga_group_entity_add( "SPL", "Node 1935" )
+
+ga_group_entity_add( "SPL", "Node 1989" )
+
+ga_group_entity_add( "SPL", "Node 2043" )
+
+ga_group_entity_add( "SPL", "Node 2097" )
+
+ga_group_entity_add( "SPL", "Node 2151" )
+
+ga_group_entity_add( "SPL", "Node 2205" )
+
+ga_group_entity_add( "SPL", "Node 2259" )
+
+ga_group_entity_add( "SPL", "Node 2313" )
+
+ga_group_entity_add( "SPL", "Node 2367" )
+
+ga_group_entity_add( "SPL", "Node 2421" )
+
+ga_group_entity_add( "SPL", "Node 2475" )
+
+ga_group_entity_add( "SPL", "Node 2529" )
+
+ga_group_entity_add( "SPL", "Node 2583" )
+
+ga_group_entity_add( "SPL", "Node 2637" )
+
+ga_group_entity_add( "SPL", "Node 2691" )
+
+ga_group_entity_add( "SPL", "Node 2745" )
+
+ga_group_entity_add( "SPL", "Node 2799" )
+
+ga_group_entity_add( "SPL", "Node 2853" )
+
+ga_group_entity_add( "SPL", "Node 2907" )
+
+ga_group_entity_add( "SPL", "Node 2961" )
+
+ga_group_entity_add( "SPL", "Node 3015" )
+
+ga_group_entity_add( "SPL", "Node 3069" )
+
+ga_group_entity_add( "SPL", "Node 3123" )
+
+ga_group_entity_add( "SPL", "Node 3177" )
+
+ga_group_entity_add( "SPL", "Node 3231" )
+
+ga_group_entity_add( "SPL", "Node 3285" )
+
+ga_group_entity_add( "SPL", "Node 3339" )
+
+ga_group_entity_add( "SPL", "Node 3393" )
+
+ga_group_entity_add( "SPL", "Node 3447" )
+
+ga_group_entity_add( "SPL", "Node 3501" )
+
+ga_group_entity_add( "SPL", "Node 3555" )
+
+ga_group_entity_add( "SPL", "Node 3609" )
+
+ga_group_entity_add( "SPL", "Node 3663" )
+
+ga_group_entity_add( "SPL", "Node 3717" )
+
+ga_group_entity_add( "SPL", "Node 3771" )
+
+ga_group_entity_add( "SPL", "Node 3825" )
+
+ga_group_entity_add( "SPL", "Node 3879" )
+
+ga_group_entity_add( "SPL", "Node 3933" )
+
+ga_group_entity_add( "SPL", "Node 3987" )
+
+ga_group_entity_add( "SPL", "Node 1242" )
+
+ga_group_entity_add( "SPL", "Node 1296" )
+
+ga_group_entity_add( "SPL", "Node 1350" )
+
+ga_group_entity_add( "SPL", "Node 1404" )
+
+ga_group_entity_add( "SPL", "Node 1458" )
+
+ga_group_entity_add( "SPL", "Node 1512" )
+
+ga_group_entity_add( "SPL", "Node 1566" )
+
+ga_group_entity_add( "SPL", "Node 1620" )
+
+ga_group_entity_add( "SPL", "Node 1674" )
+
+ga_group_entity_add( "SPL", "Node 1728" )
+
+ga_group_entity_add( "SPL", "Node 1782" )
+
+ga_group_entity_add( "SPL", "Node 1836" )
+
+ga_group_entity_add( "SPL", "Node 1890" )
+
+ga_group_entity_add( "SPL", "Node 1944" )
+
+ga_group_entity_add( "SPL", "Node 1998" )
+
+ga_group_entity_add( "SPL", "Node 2052" )
+
+ga_group_entity_add( "SPL", "Node 2106" )
+
+ga_group_entity_add( "SPL", "Node 2160" )
+
+ga_group_entity_add( "SPL", "Node 2214" )
+
+ga_group_entity_add( "SPL", "Node 2268" )
+
+ga_group_entity_add( "SPL", "Node 2322" )
+
+ga_group_entity_add( "SPL", "Node 2376" )
+
+ga_group_entity_add( "SPL", "Node 2430" )
+
+ga_group_entity_add( "SPL", "Node 2484" )
+
+ga_group_entity_add( "SPL", "Node 2538" )
+
+ga_group_entity_add( "SPL", "Node 2592" )
+
+ga_group_entity_add( "SPL", "Node 2646" )
+
+ga_group_entity_add( "SPL", "Node 2700" )
+
+ga_group_entity_add( "SPL", "Node 2754" )
+
+ga_group_entity_add( "SPL", "Node 2808" )
+
+ga_group_entity_add( "SPL", "Node 2862" )
+
+ga_group_entity_add( "SPL", "Node 2916" )
+
+ga_group_entity_add( "SPL", "Node 2970" )
+
+ga_group_entity_add( "SPL", "Node 3024" )
+
+ga_group_entity_add( "SPL", "Node 3078" )
+
+ga_group_entity_add( "SPL", "Node 3132" )
+
+ga_group_entity_add( "SPL", "Node 3186" )
+
+ga_group_entity_add( "SPL", "Node 3240" )
+
+ga_group_entity_add( "SPL", "Node 3294" )
+
+ga_group_entity_add( "SPL", "Node 3348" )
+
+ga_group_entity_add( "SPL", "Node 3402" )
+
+ga_group_entity_add( "SPL", "Node 3456" )
+
+ga_group_entity_add( "SPL", "Node 3510" )
+
+ga_group_entity_add( "SPL", "Node 3564" )
+
+ga_group_entity_add( "SPL", "Node 3618" )
+
+ga_group_entity_add( "SPL", "Node 3672" )
+
+ga_group_entity_add( "SPL", "Node 3726" )
+
+ga_group_entity_add( "SPL", "Node 3780" )
+
+ga_group_entity_add( "SPL", "Node 3834" )
+
+ga_group_entity_add( "SPL", "Node 3888" )
+
+ga_group_entity_add( "SPL", "Node 3942" )
+
+ga_group_entity_add( "SPL", "Node 3996" )
+
+ga_group_entity_add( "SPL", "Node 1242" )
+
+ga_group_entity_add( "SPL", "Node 1296" )
+
+ga_group_entity_add( "SPL", "Node 1350" )
+
+ga_group_entity_add( "SPL", "Node 1404" )
+
+ga_group_entity_add( "SPL", "Node 1458" )
+
+ga_group_entity_add( "SPL", "Node 1512" )
+
+ga_group_entity_add( "SPL", "Node 1566" )
+
+ga_group_entity_add( "SPL", "Node 1620" )
+
+ga_group_entity_add( "SPL", "Node 1674" )
+
+ga_group_entity_add( "SPL", "Node 1728" )
+
+ga_group_entity_add( "SPL", "Node 1782" )
+
+ga_group_entity_add( "SPL", "Node 1836" )
+
+ga_group_entity_add( "SPL", "Node 1890" )
+
+ga_group_entity_add( "SPL", "Node 1944" )
+
+ga_group_entity_add( "SPL", "Node 1998" )
+
+ga_group_entity_add( "SPL", "Node 2052" )
+
+ga_group_entity_add( "SPL", "Node 2106" )
+
+ga_group_entity_add( "SPL", "Node 2160" )
+
+ga_group_entity_add( "SPL", "Node 2214" )
+
+ga_group_entity_add( "SPL", "Node 2268" )
+
+ga_group_entity_add( "SPL", "Node 2322" )
+
+ga_group_entity_add( "SPL", "Node 2376" )
+
+ga_group_entity_add( "SPL", "Node 2430" )
+
+ga_group_entity_add( "SPL", "Node 2484" )
+
+ga_group_entity_add( "SPL", "Node 2538" )
+
+ga_group_entity_add( "SPL", "Node 2592" )
+
+ga_group_entity_add( "SPL", "Node 2646" )
+
+ga_group_entity_add( "SPL", "Node 2700" )
+
+ga_group_entity_add( "SPL", "Node 2754" )
+
+ga_group_entity_add( "SPL", "Node 2808" )
+
+ga_group_entity_add( "SPL", "Node 2862" )
+
+ga_group_entity_add( "SPL", "Node 2916" )
+
+ga_group_entity_add( "SPL", "Node 2970" )
+
+ga_group_entity_add( "SPL", "Node 3024" )
+
+ga_group_entity_add( "SPL", "Node 3078" )
+
+ga_group_entity_add( "SPL", "Node 3132" )
+
+ga_group_entity_add( "SPL", "Node 3186" )
+
+ga_group_entity_add( "SPL", "Node 3240" )
+
+ga_group_entity_add( "SPL", "Node 3294" )
+
+ga_group_entity_add( "SPL", "Node 3348" )
+
+ga_group_entity_add( "SPL", "Node 3402" )
+
+ga_group_entity_add( "SPL", "Node 3456" )
+
+ga_group_entity_add( "SPL", "Node 3510" )
+
+ga_group_entity_add( "SPL", "Node 3564" )
+
+ga_group_entity_add( "SPL", "Node 3618" )
+
+ga_group_entity_add( "SPL", "Node 3672" )
+
+ga_group_entity_add( "SPL", "Node 3726" )
+
+ga_group_entity_add( "SPL", "Node 3780" )
+
+ga_group_entity_add( "SPL", "Node 3834" )
+
+ga_group_entity_add( "SPL", "Node 3888" )
+
+ga_group_entity_add( "SPL", "Node 3942" )
+
+ga_group_entity_add( "SPL", "Node 3996" )
+
+ga_group_entity_add( "SPL", "Node 1251" )
+
+ga_group_entity_add( "SPL", "Node 1305" )
+
+ga_group_entity_add( "SPL", "Node 1359" )
+
+ga_group_entity_add( "SPL", "Node 1413" )
+
+ga_group_entity_add( "SPL", "Node 1458" )
+
+ga_group_entity_add( "SPL", "Node 1512" )
+
+ga_group_entity_add( "SPL", "Node 1566" )
+
+ga_group_entity_add( "SPL", "Node 1620" )
+
+ga_group_entity_add( "SPL", "Node 1674" )
+
+ga_group_entity_add( "SPL", "Node 1728" )
+
+ga_group_entity_add( "SPL", "Node 1782" )
+
+ga_group_entity_add( "SPL", "Node 1836" )
+
+ga_group_entity_add( "SPL", "Node 1890" )
+
+ga_group_entity_add( "SPL", "Node 1944" )
+
+ga_group_entity_add( "SPL", "Node 1998" )
+
+ga_group_entity_add( "SPL", "Node 2052" )
+
+ga_group_entity_add( "SPL", "Node 2106" )
+
+ga_group_entity_add( "SPL", "Node 2160" )
+
+ga_group_entity_add( "SPL", "Node 2214" )
+
+ga_group_entity_add( "SPL", "Node 2268" )
+
+ga_group_entity_add( "SPL", "Node 2322" )
+
+ga_group_entity_add( "SPL", "Node 2376" )
+
+ga_group_entity_add( "SPL", "Node 2430" )
+
+ga_group_entity_add( "SPL", "Node 2484" )
+
+ga_group_entity_add( "SPL", "Node 2538" )
+
+ga_group_entity_add( "SPL", "Node 2592" )
+
+ga_group_entity_add( "SPL", "Node 2646" )
+
+ga_group_entity_add( "SPL", "Node 2700" )
+
+ga_group_entity_add( "SPL", "Node 2754" )
+
+ga_group_entity_add( "SPL", "Node 2808" )
+
+ga_group_entity_add( "SPL", "Node 2862" )
+
+ga_group_entity_add( "SPL", "Node 2916" )
+
+ga_group_entity_add( "SPL", "Node 2970" )
+
+ga_group_entity_add( "SPL", "Node 3024" )
+
+ga_group_entity_add( "SPL", "Node 3078" )
+
+ga_group_entity_add( "SPL", "Node 3132" )
+
+ga_group_entity_add( "SPL", "Node 3186" )
+
+ga_group_entity_add( "SPL", "Node 3240" )
+
+ga_group_entity_add( "SPL", "Node 3294" )
+
+ga_group_entity_add( "SPL", "Node 3348" )
+
+ga_group_entity_add( "SPL", "Node 3402" )
+
+ga_group_entity_add( "SPL", "Node 3456" )
+
+ga_group_entity_add( "SPL", "Node 3510" )
+
+ga_group_entity_add( "SPL", "Node 3564" )
+
+ga_group_entity_add( "SPL", "Node 3618" )
+
+ga_group_entity_add( "SPL", "Node 3672" )
+
+ga_group_entity_add( "SPL", "Node 3726" )
+
+ga_group_entity_add( "SPL", "Node 3780" )
+
+ga_group_entity_add( "SPL", "Node 3834" )
+
+ga_group_entity_add( "SPL", "Node 3888" )
+
+ga_group_entity_add( "SPL", "Node 3942" )
+
+ga_group_entity_add( "SPL", "Node 3996" )
+
+ga_group_entity_add( "SPL", "Node 1251" )
+
+ga_group_entity_add( "SPL", "Node 1305" )
+
+ga_group_entity_add( "SPL", "Node 1359" )
+
+ga_group_entity_add( "SPL", "Node 1413" )
+
+ga_group_entity_add( "SPL", "Node 1467" )
+
+ga_group_entity_add( "SPL", "Node 1521" )
+
+ga_group_entity_add( "SPL", "Node 1575" )
+
+ga_group_entity_add( "SPL", "Node 1629" )
+
+ga_group_entity_add( "SPL", "Node 1683" )
+
+ga_group_entity_add( "SPL", "Node 1737" )
+
+ga_group_entity_add( "SPL", "Node 1791" )
+
+ga_group_entity_add( "SPL", "Node 1845" )
+
+ga_group_entity_add( "SPL", "Node 1899" )
+
+ga_group_entity_add( "SPL", "Node 1953" )
+
+ga_group_entity_add( "SPL", "Node 2007" )
+
+ga_group_entity_add( "SPL", "Node 2061" )
+
+ga_group_entity_add( "SPL", "Node 2115" )
+
+ga_group_entity_add( "SPL", "Node 2169" )
+
+ga_group_entity_add( "SPL", "Node 2223" )
+
+ga_group_entity_add( "SPL", "Node 2277" )
+
+ga_group_entity_add( "SPL", "Node 2331" )
+
+ga_group_entity_add( "SPL", "Node 2385" )
+
+ga_group_entity_add( "SPL", "Node 2439" )
+
+ga_group_entity_add( "SPL", "Node 2493" )
+
+ga_group_entity_add( "SPL", "Node 2547" )
+
+ga_group_entity_add( "SPL", "Node 2601" )
+
+ga_group_entity_add( "SPL", "Node 2655" )
+
+ga_group_entity_add( "SPL", "Node 2709" )
+
+ga_group_entity_add( "SPL", "Node 2763" )
+
+ga_group_entity_add( "SPL", "Node 2817" )
+
+ga_group_entity_add( "SPL", "Node 2871" )
+
+ga_group_entity_add( "SPL", "Node 2925" )
+
+ga_group_entity_add( "SPL", "Node 2979" )
+
+ga_group_entity_add( "SPL", "Node 3033" )
+
+ga_group_entity_add( "SPL", "Node 3087" )
+
+ga_group_entity_add( "SPL", "Node 3141" )
+
+ga_group_entity_add( "SPL", "Node 3195" )
+
+ga_group_entity_add( "SPL", "Node 3249" )
+
+ga_group_entity_add( "SPL", "Node 3303" )
+
+ga_group_entity_add( "SPL", "Node 3357" )
+
+ga_group_entity_add( "SPL", "Node 3411" )
+
+ga_group_entity_add( "SPL", "Node 3465" )
+
+ga_group_entity_add( "SPL", "Node 3519" )
+
+ga_group_entity_add( "SPL", "Node 3573" )
+
+ga_group_entity_add( "SPL", "Node 3627" )
+
+ga_group_entity_add( "SPL", "Node 3681" )
+
+ga_group_entity_add( "SPL", "Node 3735" )
+
+ga_group_entity_add( "SPL", "Node 3789" )
+
+ga_group_entity_add( "SPL", "Node 3843" )
+
+ga_group_entity_add( "SPL", "Node 3897" )
+
+ga_group_entity_add( "SPL", "Node 3951" )
+
+ga_group_entity_add( "SPL", "Node 4005" )
+
+ga_group_entity_add( "SPL", "Node 1260" )
+
+ga_group_entity_add( "SPL", "Node 1314" )
+
+ga_group_entity_add( "SPL", "Node 1368" )
+
+ga_group_entity_add( "SPL", "Node 1422" )
+
+ga_group_entity_add( "SPL", "Node 1467" )
+
+ga_group_entity_add( "SPL", "Node 1521" )
+
+ga_group_entity_add( "SPL", "Node 1575" )
+
+ga_group_entity_add( "SPL", "Node 1629" )
+
+ga_group_entity_add( "SPL", "Node 1683" )
+
+ga_group_entity_add( "SPL", "Node 1737" )
+
+ga_group_entity_add( "SPL", "Node 1791" )
+
+ga_group_entity_add( "SPL", "Node 1845" )
+
+ga_group_entity_add( "SPL", "Node 1899" )
+
+ga_group_entity_add( "SPL", "Node 1953" )
+
+ga_group_entity_add( "SPL", "Node 2007" )
+
+ga_group_entity_add( "SPL", "Node 2061" )
+
+ga_group_entity_add( "SPL", "Node 2115" )
+
+ga_group_entity_add( "SPL", "Node 2169" )
+
+ga_group_entity_add( "SPL", "Node 2223" )
+
+ga_group_entity_add( "SPL", "Node 2277" )
+
+ga_group_entity_add( "SPL", "Node 2331" )
+
+ga_group_entity_add( "SPL", "Node 2385" )
+
+ga_group_entity_add( "SPL", "Node 2439" )
+
+ga_group_entity_add( "SPL", "Node 2493" )
+
+ga_group_entity_add( "SPL", "Node 2547" )
+
+ga_group_entity_add( "SPL", "Node 2601" )
+
+ga_group_entity_add( "SPL", "Node 2655" )
+
+ga_group_entity_add( "SPL", "Node 2709" )
+
+ga_group_entity_add( "SPL", "Node 2763" )
+
+ga_group_entity_add( "SPL", "Node 2817" )
+
+ga_group_entity_add( "SPL", "Node 2871" )
+
+ga_group_entity_add( "SPL", "Node 2925" )
+
+ga_group_entity_add( "SPL", "Node 2979" )
+
+ga_group_entity_add( "SPL", "Node 3033" )
+
+ga_group_entity_add( "SPL", "Node 3087" )
+
+ga_group_entity_add( "SPL", "Node 3141" )
+
+ga_group_entity_add( "SPL", "Node 3195" )
+
+ga_group_entity_add( "SPL", "Node 3249" )
+
+ga_group_entity_add( "SPL", "Node 3303" )
+
+ga_group_entity_add( "SPL", "Node 3357" )
+
+ga_group_entity_add( "SPL", "Node 3411" )
+
+ga_group_entity_add( "SPL", "Node 3465" )
+
+ga_group_entity_add( "SPL", "Node 3519" )
+
+ga_group_entity_add( "SPL", "Node 3573" )
+
+ga_group_entity_add( "SPL", "Node 3627" )
+
+ga_group_entity_add( "SPL", "Node 3681" )
+
+ga_group_entity_add( "SPL", "Node 3735" )
+
+ga_group_entity_add( "SPL", "Node 3789" )
+
+ga_group_entity_add( "SPL", "Node 3843" )
+
+ga_group_entity_add( "SPL", "Node 3897" )
+
+ga_group_entity_add( "SPL", "Node 3951" )
+
+ga_group_entity_add( "SPL", "Node 4005" )
+
+ga_group_entity_add( "SPL", "Node 1260" )
+
+ga_group_entity_add( "SPL", "Node 1314" )
+
+ga_group_entity_add( "SPL", "Node 1368" )
+
+ga_group_entity_add( "SPL", "Node 1422" )
+
+ga_group_entity_add( "SPL", "Node 1476" )
+
+ga_group_entity_add( "SPL", "Node 1530" )
+
+ga_group_entity_add( "SPL", "Node 1584" )
+
+ga_group_entity_add( "SPL", "Node 1638" )
+
+ga_group_entity_add( "SPL", "Node 1692" )
+
+ga_group_entity_add( "SPL", "Node 1746" )
+
+ga_group_entity_add( "SPL", "Node 1800" )
+
+ga_group_entity_add( "SPL", "Node 1854" )
+
+ga_group_entity_add( "SPL", "Node 1908" )
+
+ga_group_entity_add( "SPL", "Node 1962" )
+
+ga_group_entity_add( "SPL", "Node 2016" )
+
+ga_group_entity_add( "SPL", "Node 2070" )
+
+ga_group_entity_add( "SPL", "Node 2124" )
+
+ga_group_entity_add( "SPL", "Node 2178" )
+
+ga_group_entity_add( "SPL", "Node 2232" )
+
+ga_group_entity_add( "SPL", "Node 2286" )
+
+ga_group_entity_add( "SPL", "Node 2340" )
+
+ga_group_entity_add( "SPL", "Node 2394" )
+
+ga_group_entity_add( "SPL", "Node 2448" )
+
+ga_group_entity_add( "SPL", "Node 2502" )
+
+ga_group_entity_add( "SPL", "Node 2556" )
+
+ga_group_entity_add( "SPL", "Node 2610" )
+
+ga_group_entity_add( "SPL", "Node 2664" )
+
+ga_group_entity_add( "SPL", "Node 2718" )
+
+ga_group_entity_add( "SPL", "Node 2772" )
+
+ga_group_entity_add( "SPL", "Node 2826" )
+
+ga_group_entity_add( "SPL", "Node 2880" )
+
+ga_group_entity_add( "SPL", "Node 2934" )
+
+ga_group_entity_add( "SPL", "Node 2988" )
+
+ga_group_entity_add( "SPL", "Node 3042" )
+
+ga_group_entity_add( "SPL", "Node 3096" )
+
+ga_group_entity_add( "SPL", "Node 3150" )
+
+ga_group_entity_add( "SPL", "Node 3204" )
+
+ga_group_entity_add( "SPL", "Node 3258" )
+
+ga_group_entity_add( "SPL", "Node 3312" )
+
+ga_group_entity_add( "SPL", "Node 3366" )
+
+ga_group_entity_add( "SPL", "Node 3420" )
+
+ga_group_entity_add( "SPL", "Node 3474" )
+
+ga_group_entity_add( "SPL", "Node 3528" )
+
+ga_group_entity_add( "SPL", "Node 3582" )
+
+ga_group_entity_add( "SPL", "Node 3636" )
+
+ga_group_entity_add( "SPL", "Node 3690" )
+
+ga_group_entity_add( "SPL", "Node 3744" )
+
+ga_group_entity_add( "SPL", "Node 3798" )
+
+ga_group_entity_add( "SPL", "Node 3852" )
+
+ga_group_entity_add( "SPL", "Node 3906" )
+
+ga_group_entity_add( "SPL", "Node 3960" )
+
+ga_group_entity_add( "SPL", "Node 4014" )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[0.01000 0.00000 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "2", "[8.04337 10.87060 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "3", "[22.02160 29.38000 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "4", "[13.62600 0.00000 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "5", "[15.30055 10.87060 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "6", "[24.74900 29.38000 0]", "Coord 0", asm_create_grid_xyz_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10001", "Point 1", "Point 2", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10002", "Point 2", "Point 3", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10003", "Point 4", "Point 5", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10004", "Point 5", "Point 6", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10005", "Point 1", "Point 4", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10006", "Point 2", "Point 5", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "10007", "Point 3", "Point 6", 0, "", 50., 1, asm_line_2point_created_ids )
+STRING sgm_surface_4edge_created_ids[VIRTUAL]
+sgm_const_surface_4edge( "100001", "Curve 10005", "Curve 10003", "Curve 10001", "Curve 10006", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( "100002", "Curve 10004", "Curve 10006", "Curve 10007", "Curve 10002", sgm_surface_4edge_created_ids )
+sys_poll_option( 2 )
+ga_group_create( "AeroSurf" )
+ga_group_entity_add( "AeroSurf", "Surface 100001:100002" )
+sys_poll_option( 0 )
+loadcase_create2( "Constraints", "Static", "", 1., ["Fix"], [0], [1.], "", 0., TRUE )
+uil_pref_analysis.set_analysis_preference( "MSC.Nastran", "Aeroelasticity",  @
+".bdf", ".op2", "No Mapping" )
+$#  Loading... msc_nastran_defn_dflt_tbs( MSC.Nastran, Aeroelasticity )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["AeroSurf"] )
+flat_plate_surf_create( "wing1", [0., 0., 0.], [0., 0., 0.], 0., 0., 100001,  @
+1, 0, "None", 0, ["empty"], 31, 31, [0., 0.033333335, 0.06666667, 0.1,  @
+0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.30000001, 0.33333334,  @
+0.36666667, 0.40000001, 0.43333334, 0.46666667, 0.5, 0.53333336, 0.56666666,  @
+0.60000002, 0.63333333, 0.66666669, 0.69999999, 0.73333335, 0.76666665,  @
+0.80000001, 0.83333331, 0.86666667, 0.89999998, 0.93333334, 0.96666664, 1.], [ @
+0., 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333,  @
+0.26666668, 0.30000001, 0.33333334, 0.36666667, 0.40000001, 0.43333334,  @
+0.46666667, 0.5, 0.53333336, 0.56666666, 0.60000002, 0.63333333, 0.66666669,  @
+0.69999999, 0.73333335, 0.76666665, 0.80000001, 0.83333331, 0.86666667,  @
+0.89999998, 0.93333334, 0.96666664, 1.], FALSE, "Surface 100001", 0, TRUE )
+$# Question in application SGM by application Geometry
+$#     Surface 100001 already exists at the specified location to create the 
+$# next Surface. Do you wish to create a duplicate Surface?
+$? YES 1000034
+$# 1 Surface Created: Surface 100003
+$# Group "wing1" created.
+$# Property Set "wing1" created.
+$# 1 Surface Deleted: Surface 100003
+flds_store_start_elem_id( 101001 )
+flat_plate_surf_create( "wing2", [0., 0., 0.], [0., 0., 0.], 0., 0., 10001001, @
+1, 0, "None", 0, ["empty"], 91, 31, [0., 0.011111111, 0.022222223,  @
+0.033333335, 0.044444446, 0.055555556, 0.06666667, 0.077777781, 0.088888891,  @
+0.1, 0.11111111, 0.12222222, 0.13333334, 0.14444445, 0.15555556, 0.16666667,  @
+0.17777778, 0.18888889, 0.2, 0.21111111, 0.22222222, 0.23333333, 0.24444444,  @
+0.25555557, 0.26666668, 0.27777779, 0.2888889, 0.30000001, 0.31111112,  @
+0.32222223, 0.33333334, 0.34444445, 0.35555556, 0.36666667, 0.37777779,  @
+0.3888889, 0.40000001, 0.41111112, 0.42222223, 0.43333334, 0.44444445,  @
+0.45555556, 0.46666667, 0.47777778, 0.48888889, 0.5, 0.51111114, 0.52222222,  @
+0.53333336, 0.54444444, 0.55555558, 0.56666666, 0.5777778, 0.58888888,  @
+0.60000002, 0.6111111, 0.62222224, 0.63333333, 0.64444447, 0.65555555,  @
+0.66666669, 0.67777777, 0.68888891, 0.69999999, 0.71111113, 0.72222221,  @
+0.73333335, 0.74444443, 0.75555557, 0.76666665, 0.77777779, 0.78888887,  @
+0.80000001, 0.81111109, 0.82222223, 0.83333331, 0.84444445, 0.85555553,  @
+0.86666667, 0.87777776, 0.8888889, 0.89999998, 0.91111112, 0.9222222,  @
+0.93333334, 0.94444442, 0.95555556, 0.96666664, 0.97777778, 0.98888886, 1.], [ @
+0., 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333,  @
+0.26666668, 0.30000001, 0.33333334, 0.36666667, 0.40000001, 0.43333334,  @
+0.46666667, 0.5, 0.53333336, 0.56666666, 0.60000002, 0.63333333, 0.66666669,  @
+0.69999999, 0.73333335, 0.76666665, 0.80000001, 0.83333331, 0.86666667,  @
+0.89999998, 0.93333334, 0.96666664, 1.], FALSE, "Surface 100002", 0, TRUE )
+$# Question in application SGM by application Geometry
+$#     Surface 100002 already exists at the specified location to create the 
+$# next Surface. Do you wish to create a duplicate Surface?
+$? YES 1000034
+$# 1 Surface Created: Surface 100003
+$# Group "wing2" created.
+$# Property Set "wing2" created.
+$# 1 Surface Deleted: Surface 100003
+flds_store_start_elem_id( 102001 )
+$# Acknowledgement requested from application APP INTERFACES
+$#     The Spline Name [ spl1 ] must be of the form "NAME_ID". The value  of 
+$# ID becomes the SID on the bulk data entry.
+$? NO 20039 
+flds_spline_create( "spl_1", "Infinite Plate", ["General", "Rigid Attach"], "" @
+, ["SPL"], "", ["wing1", "wing2"] )
+fields_create_general( "SUPER_GROUP_AeroSG2D", 2, 5, 2, "Real", "Coord 0", "", @
+0, 0, 0, 0 )
+fields_create_general_term( "SUPER_GROUP_AeroSG2D", 0, 0, 0, 128,  @
+"58.759998*6.7979002*399.44461*Coord 0*3*1.226*Half Model" )
+fields_create_general( "STRUCT_MODEL_-1", 2, 5, 2, "Real", "Coord 0", "", 0,  @
+0, 0, 0 )
+fields_create_general_term( "STRUCT_MODEL_-1", 0, 0, 0, 250,  @
+"TRUE*0.*TRUE*Lumped*0.102*TRUE**FALSE*TRUE*20.*TRUE*0.102*TRUE" )
+
+uil_pref_analysis.set_analysis_preference( "MSC.Nastran", "Structural", ".bdf" @
+, ".op2", "No Mapping" )
+
+fields_create_dfem( "W2GJ", "Element", "Scalar", 300, ["Elem 100001",  @
+"Elem 100002", "Elem 100003", "Elem 100004", "Elem 100005", "Elem 100006",  @
+"Elem 100007", "Elem 100008", "Elem 100009", "Elem 100010", "Elem 100011",  @
+"Elem 100012", "Elem 100013", "Elem 100014", "Elem 100015", "Elem 100016",  @
+"Elem 100017", "Elem 100018", "Elem 100019", "Elem 100020", "Elem 100021",  @
+"Elem 100022", "Elem 100023", "Elem 100024", "Elem 100025", "Elem 100026",  @
+"Elem 100027", "Elem 100028", "Elem 100029", "Elem 100030", "Elem 100031",  @
+"Elem 100032", "Elem 100033", "Elem 100034", "Elem 100035", "Elem 100036",  @
+"Elem 100037", "Elem 100038", "Elem 100039", "Elem 100040", "Elem 100041",  @
+"Elem 100042", "Elem 100043", "Elem 100044", "Elem 100045", "Elem 100046",  @
+"Elem 100047", "Elem 100048", "Elem 100049", "Elem 100050", "Elem 100051",  @
+"Elem 100052", "Elem 100053", "Elem 100054", "Elem 100055", "Elem 100056",  @
+"Elem 100057", "Elem 100058", "Elem 100059", "Elem 100060", "Elem 100061",  @
+"Elem 100062", "Elem 100063", "Elem 100064", "Elem 100065", "Elem 100066",  @
+"Elem 100067", "Elem 100068", "Elem 100069", "Elem 100070", "Elem 100071",  @
+"Elem 100072", "Elem 100073", "Elem 100074", "Elem 100075", "Elem 100076",  @
+"Elem 100077", "Elem 100078", "Elem 100079", "Elem 100080", "Elem 100081",  @
+"Elem 100082", "Elem 100083", "Elem 100084", "Elem 100085", "Elem 100086",  @
+"Elem 100087", "Elem 100088", "Elem 100089", "Elem 100090", "Elem 100091",  @
+"Elem 100092", "Elem 100093", "Elem 100094", "Elem 100095", "Elem 100096",  @
+"Elem 100097", "Elem 100098", "Elem 100099", "Elem 100100", "Elem 10001001",  @
+"Elem 10001002", "Elem 10001003", "Elem 10001004", "Elem 10001005",  @
+"Elem 10001006", "Elem 10001007", "Elem 10001008", "Elem 10001009",  @
+"Elem 10001010", "Elem 10001011", "Elem 10001012", "Elem 10001013",  @
+"Elem 10001014", "Elem 10001015", "Elem 10001016", "Elem 10001017",  @
+"Elem 10001018", "Elem 10001019", "Elem 10001020", "Elem 10001021",  @
+"Elem 10001022", "Elem 10001023", "Elem 10001024", "Elem 10001025",  @
+"Elem 10001026", "Elem 10001027", "Elem 10001028", "Elem 10001029",  @
+"Elem 10001030", "Elem 10001031", "Elem 10001032", "Elem 10001033",  @
+"Elem 10001034", "Elem 10001035", "Elem 10001036", "Elem 10001037",  @
+"Elem 10001038", "Elem 10001039", "Elem 10001040", "Elem 10001041",  @
+"Elem 10001042", "Elem 10001043", "Elem 10001044", "Elem 10001045",  @
+"Elem 10001046", "Elem 10001047", "Elem 10001048", "Elem 10001049",  @
+"Elem 10001050", "Elem 10001051", "Elem 10001052", "Elem 10001053",  @
+"Elem 10001054", "Elem 10001055", "Elem 10001056", "Elem 10001057",  @
+"Elem 10001058", "Elem 10001059", "Elem 10001060", "Elem 10001061",  @
+"Elem 10001062", "Elem 10001063", "Elem 10001064", "Elem 10001065",  @
+"Elem 10001066", "Elem 10001067", "Elem 10001068", "Elem 10001069",  @
+"Elem 10001070", "Elem 10001071", "Elem 10001072", "Elem 10001073",  @
+"Elem 10001074", "Elem 10001075", "Elem 10001076", "Elem 10001077",  @
+"Elem 10001078", "Elem 10001079", "Elem 10001080", "Elem 10001081",  @
+"Elem 10001082", "Elem 10001083", "Elem 10001084", "Elem 10001085",  @
+"Elem 10001086", "Elem 10001087", "Elem 10001088", "Elem 10001089",  @
+"Elem 10001090", "Elem 10001091", "Elem 10001092", "Elem 10001093",  @
+"Elem 10001094", "Elem 10001095", "Elem 10001096", "Elem 10001097",  @
+"Elem 10001098", "Elem 10001099", "Elem 10001100", "Elem 10001101",  @
+"Elem 10001102", "Elem 10001103", "Elem 10001104", "Elem 10001105",  @
+"Elem 10001106", "Elem 10001107", "Elem 10001108", "Elem 10001109",  @
+"Elem 10001110", "Elem 10001111", "Elem 10001112", "Elem 10001113",  @
+"Elem 10001114", "Elem 10001115", "Elem 10001116", "Elem 10001117",  @
+"Elem 10001118", "Elem 10001119", "Elem 10001120", "Elem 10001121",  @
+"Elem 10001122", "Elem 10001123", "Elem 10001124", "Elem 10001125",  @
+"Elem 10001126", "Elem 10001127", "Elem 10001128", "Elem 10001129",  @
+"Elem 10001130", "Elem 10001131", "Elem 10001132", "Elem 10001133",  @
+"Elem 10001134", "Elem 10001135", "Elem 10001136", "Elem 10001137",  @
+"Elem 10001138", "Elem 10001139", "Elem 10001140", "Elem 10001141",  @
+"Elem 10001142", "Elem 10001143", "Elem 10001144", "Elem 10001145",  @
+"Elem 10001146", "Elem 10001147", "Elem 10001148", "Elem 10001149",  @
+"Elem 10001150", "Elem 10001151", "Elem 10001152", "Elem 10001153",  @
+"Elem 10001154", "Elem 10001155", "Elem 10001156", "Elem 10001157",  @
+"Elem 10001158", "Elem 10001159", "Elem 10001160", "Elem 10001161",  @
+"Elem 10001162", "Elem 10001163", "Elem 10001164", "Elem 10001165",  @
+"Elem 10001166", "Elem 10001167", "Elem 10001168", "Elem 10001169",  @
+"Elem 10001170", "Elem 10001171", "Elem 10001172", "Elem 10001173",  @
+"Elem 10001174", "Elem 10001175", "Elem 10001176", "Elem 10001177",  @
+"Elem 10001178", "Elem 10001179", "Elem 10001180", "Elem 10001181",  @
+"Elem 10001182", "Elem 10001183", "Elem 10001184", "Elem 10001185",  @
+"Elem 10001186", "Elem 10001187", "Elem 10001188", "Elem 10001189",  @
+"Elem 10001190", "Elem 10001191", "Elem 10001192", "Elem 10001193",  @
+"Elem 10001194", "Elem 10001195", "Elem 10001196", "Elem 10001197",  @
+"Elem 10001198", "Elem 10001199", "Elem 10001200"], ["-5.3879061",  @
+"-1.9110771", "-1.3406577", "-4.1590033", "-7.2063417", "-9.0952396",  @
+"-9.5023155", "-9.5666504", "-8.755579", "-5.6228037", "-4.6051846",  @
+"-1.128356", "-0.55793631", "-3.376281", "-6.4236207", "-8.3125181",  @
+"-8.719594", "-8.7839289", "-7.972858", "-4.8400826", "-3.8224797",  @
+"-0.34565118", "0.22476853", "-2.5935769", "-5.6409159", "-7.5298133",  @
+"-7.9368892", "-8.0012236", "-7.1901536", "-4.0573778", "-3.2315271",  @
+"0.24530177", "0.81572121", "-2.0026269", "-5.049963", "-6.9388604",  @
+"-7.3459363", "-7.4102712", "-6.5992012", "-3.4664249", "-2.7891245",  @
+"0.68770444", "1.2581239", "-1.5602255", "-4.6075606", "-6.4964581",  @
+"-6.9035335", "-6.9678688", "-6.1567984", "-3.0240223", "-2.4231608",  @
+"1.053668", "1.6240873", "-1.1942619", "-4.2415972", "-6.1304946", "-6.53757", @
+"-6.6019053", "-5.7908349", "-2.6580586", "-2.051158", "1.4256712",  @
+"1.9960898", "-0.82225871", "-3.8695943", "-5.7584915", "-6.1655669",  @
+"-6.2299023", "-5.4188323", "-2.2860558", "-1.6908059", "1.7860233",  @
+"2.356442", "-0.46190754", "-3.5092423", "-5.3981395", "-5.8052149",  @
+"-5.8695502", "-5.0584803", "-1.9257039", "-1.3836684", "2.0931599",  @
+"2.6635797", "-0.15476848", "-3.2021043", "-5.091002", "-5.4980774",  @
+"-5.5624127", "-4.7513423", "-1.6185664", "-1.1593269", "2.3175023",  @
+"2.8879213", "0.069571652", "-2.9777629", "-4.8666606", "-5.273736",  @
+"-5.3380713", "-4.5270009", "-1.3942249", "-0.9790374", "2.4977918",  @
+"3.0682106", "0.24986278", "-2.7974737", "-4.6863713", "-5.0934467",  @
+"-5.1577816", "-4.3467112", "-1.2139354", "-0.76948762", "2.707341",  @
+"3.2777607", "0.45941567", "-2.5879235", "-4.4768214", "-4.8838968",  @
+"-4.9482317", "-4.1371617", "-1.0043856", "-0.60467881", "2.8721497",  @
+"3.4425693", "0.62422317", "-2.4231148", "-4.3120122", "-4.7190881",  @
+"-4.7834229", "-3.9723525", "-0.83957678", "-0.54830164", "2.9285266",  @
+"3.4989462", "0.68059874", "-2.3667378", "-4.2556353", "-4.6627107",  @
+"-4.727046", "-3.9159741", "-0.78319961", "-0.51199126", "2.9648378",  @
+"3.5352569", "0.71691179", "-2.3304269", "-4.2193251", "-4.6264005",  @
+"-4.6907353", "-3.8796656", "-0.74688923", "-0.50070578", "2.9761226",  @
+"3.5465426", "0.72819686", "-2.3191419", "-4.2080393", "-4.6151147",  @
+"-4.67945", "-3.8683801", "-0.73560369", "-0.56030124", "2.9165277",  @
+"3.4869466", "0.66859567", "-2.3787379", "-4.2676353", "-4.6747103",  @
+"-4.7390456", "-3.9279749", "-0.79519922", "-0.6614328", "2.8153965",  @
+"3.3858147", "0.56746143", "-2.4798696", "-4.3687668", "-4.7758422",  @
+"-4.8401771", "-4.0291066", "-0.89633077", "-0.8571946", "2.6196339",  @
+"3.1900544", "0.37170345", "-2.6756313", "-4.564528", "-4.9716039",  @
+"-5.0359387", "-4.2248678", "-1.0920925", "-1.0323914", "2.4444375",  @
+"3.0148566", "0.1965165", "-2.8508279", "-4.7397251", "-5.1468005",  @
+"-5.2111359", "-4.4000649", "-1.2672894", "-1.1925147", "2.2843139",  @
+"2.8547316", "0.036384657", "-3.0109508", "-4.8998485", "-5.3069239",  @
+"-5.3712592", "-4.5601888", "-1.4274126", "-1.2520902", "2.2247376",  @
+"2.795157", "-0.02320051", "-3.0705271", "-4.9594245", "-5.3664994",  @
+"-5.4308348", "-4.6197629", "-1.4869882", "-1.3780788", "2.0987489",  @
+"2.6691682", "-0.14918748", "-3.196516", "-5.0854125", "-5.4924879",  @
+"-5.5568228", "-4.7457519", "-1.6129768", "-1.6075038", "1.8693252",  @
+"2.4397418", "-0.37861127", "-3.4259415", "-5.3148375", "-5.7219133",  @
+"-5.7862482", "-4.9751778", "-1.8424019", "-1.6127326", "1.8640949",  @
+"2.434516", "-0.38383409", "-3.4311686", "-5.3200665", "-5.7271419",  @
+"-5.7914767", "-4.9804058", "-1.8476306", "-1.5675298", "1.9092983",  @
+"2.4797187", "-0.33862385", "-3.3859661", "-5.2748632", "-5.6819391",  @
+"-5.746274", "-4.9352026", "-1.8024278", "-1.533374", "1.9434563", "2.5138729" @
+, "-0.30448237", "-3.3518109", "-5.2407079", "-5.6477833", "-5.7121181",  @
+"-4.9010472", "-1.7682718", "-1.451489", "2.0253408", "2.5957577",  @
+"-0.22259235", "-3.2699261", "-5.158823", "-5.5658979", "-5.6302333",  @
+"-4.8191628", "-1.6863868", "-1.3303866", "2.1464427", "2.7168608",  @
+"-0.1014887", "-3.1488221", "-5.0377202", "-5.4447956", "-5.509131",  @
+"-4.69806", "-1.5652845", "-0.97128123", "2.5055501", "3.0759654",  @
+"0.25762111", "-2.7897191", "-4.6786146", "-5.08569", "-5.1500254",  @
+"-4.3389549", "-1.206179"] )
+
+uil_pref_analysis.set_analysis_preference( "MSC.Nastran", "Aeroelasticity",  @
+".bdf", ".op2", "No Mapping" )
+
+flds_steady_aerodyn_nwashq_cre( "W2GJ", "", "", 0., 0, [0.], 0, [0.], 1., 11 )
+
+uil_pref_analysis.set_analysis_preference( "MSC.Nastran", "Structural", ".bdf" @
+, ".op2", "No Mapping" )
+
+loadcase_modify2( "Constraints", "Constraints", "Static", "", 1., ["Fix",  @
+"FLDS.SPL.spl_1", "W2GJ"], [0, 0, 0, 0], [1., 1., 1., 1.], "", 0.,  @
+FALSE )
+
+uil_pref_analysis.set_analysis_preference( "MSC.Nastran", "Aeroelasticity",  @
+".bdf", ".op2", "No Mapping" )
+
+mscnastran_subcase.create( "144", "aero1", "" )
+mscnastran_subcase.create_char_param( "LOAD CASE", "Constraints" )
+mscnastran_subcase.create_char_param( "AERO SUBCASE METHOD NAME",  @
+"Flexible Trim" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS", "1" )
+mscnastran_subcase.create_char_param( "DISPLACEMENTS 1",  @
+"DISPLACEMENT(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "ELEMENT STRESSES", "1" )
+mscnastran_subcase.create_char_param( "ELEMENT STRESSES 1",  @
+"STRESS(SORT1,REAL,VONMISES,BILIN)=0;PARAM,NOCOMPS,1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES", "1" )
+mscnastran_subcase.create_char_param( "CONSTRAINT FORCES 1",  @
+"SPCFORCES(SORT1,REAL)=0" )
+mscnastran_subcase.create_char_param( "AERODYNAMIC FORCES", "1" )
+mscnastran_subcase.create_char_param( "AERODYNAMIC FORCES 1", "AEROF=0" )
+mscnastran_subcase.create_char_param( "AERODYNAMIC PRESSURES", "1" )
+mscnastran_subcase.create_char_param( "AERODYNAMIC PRESSURES 1", "APRES=0" )
+mscnastran_subcase.create_char_param( "SUBCASE WRITE", "ON" )
+mscnastran_subcase.create_int_param( "SUBCASE INPUT 0", 0 )
+mscnastran_subcase.create_char_param( "PERFORM ERROR ANALYSIS", "ON" )
+mscnastran_subcase.create_char_param( "AERO BOUNDARY SYMMETRY FLAG",  @
+"Symmetric" )
+mscnastran_subcase.create_char_param( "AERO GROUND SYMMETRY FLAG",  @
+"Asymmetric" )
+mscnastran_subcase.create_real_param( "AERO MACH NUMBER", 0.65000002 )
+mscnastran_subcase.create_real_param( "AERO DYNAMIC PRESSURE", 29052. )
+mscnastran_subcase.create_real_param( "AERO VELOCITY", 0. )
+mscnastran_subcase.create_char_param( "AERO AIC FLAG", "TRUE" )
+mscnastran_subcase.create_int_param( "AERO RB MOTION 0", 11 )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 1", "ANGLEA" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 2", "SIDES" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 3", "ROLL" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 4", "PITCH" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 5", "YAW" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 6", "URDD1" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 7", "URDD2" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 8", "URDD3" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 9", "URDD4" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 10", "URDD5" )
+mscnastran_subcase.create_char_param( "AERO RB MOTION 11", "URDD6" )
+analysis_create.step_matrix_param( "MSC.Nastran", "144__aero1", "AERO USE ARRAY",  @
+1, 11, [-1., -2., -2., -2., -2., -2., -2., -1., -2., -2., -2.] )
+analysis_create.step_matrix_param( "MSC.Nastran", "144__aero1",  @
+"AERO ARRAY OF FIXED VALUES", 1, 11, [0.087 , 0., 0., 0., 0., 0., 0., 0., 0., 0., @
+0.] )
+analysis_create.step_matrix_param( "MSC.Nastran", "144__aero1",  @
+"AERO LINK FACTOR MATRIX", 11, 11, [[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,  @
+0.][0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.][0., 0., 0., 0., 0., 0., 0.,  @
+0., 0., 0., 0.][0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.][0., 0., 0., 0.,  @
+0., 0., 0., 0., 0., 0., 0.][0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.][0.,  @
+0., 0., 0., 0., 0., 0., 0., 0., 0., 0.][0., 0., 0., 0., 0., 0., 0., 0., 0.,  @
+0., 0.][0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.][0., 0., 0., 0., 0., 0.,  @
+0., 0., 0., 0., 0.][0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]] )
+mscnastran_subcase.create_int_param( "AERO NUMBER OF RESTRAINED NODES", 0 )
+
+$#  Beginning analysis of  uCRM
+jobfile.open( "uCRM", "ANALYZE NO JOBFILE" )
+$# Question from application APP INTERFACES
+$#     The jobname (uCRM) is already defined in the database. Do you wish to 
+$# overwrite?
+$? YES 6016027 
+msc_delete_old_files( "uCRM", ".bdf", ".op2" )
+$# Question from application APP INTERFACES
+$#     Files from a previous analysis conflict with the current job name: 
+$# "uCRM".  These files are uCRM.bdf.  Will you permit deletion of these files?
+$? YES 6022037 
+jobfile.write_spl( "/* Jobfile for PATNAS created %A% at %A% */", ["18-Feb-22" @
+, "01:12:41"] )
+jobfile.writec( "", "TRANSLATOR = pat3nas" )
+jobfile.writec( "DATABASE", "C:\Users\Vagelis\Documents\Thesis_Algorithm\P" // @
+"CL/uCRM.db" )
+jobfile.writec( "JOBNAME", "uCRM" )
+jobfile.writec( "ANALYSIS TITLE", "MSC.Nastran Aeroelastic job created on " // @
+"18-Feb-22 at 01:10:49" )
+jobfile.writec( "", "" )
+jobfile.writec( "OBJECT", "Entire Model" )
+jobfile.writec( "METHOD", "Full Run" )
+jobfile.writec( "AERO OBJECT", "AeroSG2D" )
+jobfile.writei( "REUSE AERO DATA 0", 0 )
+jobfile.writec( "", "" )
+jobfile.writec( "MODEL SUFFIX", ".bdf" )
+jobfile.writec( "RESULTS SUFFIX", ".op2" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * File Search Path Declaration" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "File Search Path", "C:\Users\Vagelis" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\help" // @
+"files" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\alters" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\icons" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\icon" // @
+"s\RibbonIcons" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\bin\exe" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\bin" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\msce" // @
+"xplore_files\" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\mscp" // @
+"rocor_files\dmap" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\mscp" // @
+"rocor_files\plb" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\mscp" // @
+"rocor_files\lib" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\mscp" // @
+"rocor_files\icons" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\shar" // @
+"eware\msc\unsupported\utilities\icons" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\shar" // @
+"eware\msc\unsupported\utilities\plb" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\shar" // @
+"eware\msc\unsupported\utilities\extra_files" )
+jobfile.writec( "File Search Path", "C:\MSC.Software\Patran_x64\20190\flds" // @
+"_icons" )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Translation Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "DATA OUTPUT", "XDB and Print" )
+jobfile.writec( "OUTPUT2 REQUESTS", "P3 Built In" )
+jobfile.writec( "OUTPUT2 FORMAT", "Binary" )
+jobfile.writec( "DIVISION TOLERANCE", "1.0e-08" )
+jobfile.writec( "NUMERICAL TOLERANCE", "1.0e-04" )
+jobfile.writec( "WRITING TOLERANCE", "1.0e-21" )
+jobfile.writec( "GEOM CHECK", "INFORM" )
+jobfile.writec( "SORTED BULK", "NO" )
+jobfile.writec( "CARD FORMAT", "either" )
+jobfile.writec( "NODE COORDINATES", "reference frame" )
+jobfile.writec( "COORD COORDINATES", "global" )
+jobfile.writec( "MSC.Nastran VERSION", "2019." )
+jobfile.writec( "WRITE STORED PRECISION", "TRUE" )
+jobfile.writec( "PROPS ON ELEM ENTRY", "FALSE" )
+jobfile.writec( "CONTINUATION ENTRY", "FALSE" )
+jobfile.writec( "PCOMPG ENTRY", "TRUE" )
+jobfile.writec( "CONVERT CBAR CBEAM", "FALSE" )
+jobfile.writec( "ITERATIVE SOLVER", "FALSE" )
+jobfile.writec( "MODEL TOLERANCE", "0.0049999999" )
+jobfile.writec( "ELEMENT PROPERTY OFFSET", "0" )
+jobfile.writec( "MATERIAL PROPERTY OFFSET", "0" )
+jobfile.writec( "TABLE OFFSET", "0" )
+jobfile.writec( "LOAD SET OFFSET", "0" )
+jobfile.writec( "LOAD CASE OFFSET", "0" )
+jobfile.writec( "CONTROL SET OFFSET", "0" )
+jobfile.writec( "RIGID ELEMENT OFFSET", "0" )
+jobfile.writec( "SCALAR POINT OFFSET", "0" )
+jobfile.writec( "BEGINNING CONTINUATION MARKER", "+      A" )
+jobfile.writec( "NUMBER ONLY", "ON" )
+jobfile.writec( "BEGINNING NUMBER", "OFF" )
+jobfile.writec( "TRAILING NUMBER", "OFF" )
+jobfile.writec( "SYNTAX NUMBER", "ON" )
+jobfile.writec( "SYNTAX MARKER", "." )
+jobfile.writec( "", "" )
+jobfile.writec( "", "/*" )
+jobfile.writec( "", " * Solution Parameters" )
+jobfile.writec( "", " */" )
+jobfile.writec( "", "" )
+jobfile.writec( "SOLUTION TYPE", "STATIC AEROELASTIC RESPONSE" )
+jobfile.writei( "SOLUTION SEQUENCE", 144 )
+jobfile.writec( "DATABASE RUN", "" )
+jobfile.writec( "AUTOMATIC CONSTRAINTS", "ON" )
+jobfile.writec( "SHELL NORMAL TOLERANCE", "20." )
+jobfile.writec( "MASS CALCULATION", "Lumped" )
+jobfile.writec( "DATA DECK ECHO", "None" )
+jobfile.writec( "PLATE RZ STIFFNESS FACTOR", "" )
+jobfile.writec( "MAXIMUM PRINTED LINES", "99999999" )
+jobfile.writec( "MAXIMUM RUN TIME", "600" )
+jobfile.writec( "WT-MASS CONVERSION", "1." )
+jobfile.writec( "NODE ID FOR WT-GENER", "" )
+jobfile.writec( "AERO UNIT SCALE FACTOR", "1." )
+jobfile.writec( "AERO STEADY REF CHORD", "6.7979002" )
+jobfile.writec( "AERO STEADY REF SPAN", "58.759998" )
+jobfile.writec( "AERO STEADY REF AREA", "399.44461" )
+jobfile.writec( "AERO STEADY RIGID COORD", "0" )
+jobfile.writei( "AERO DENSITY UNIT", 3 )
+jobfile.writec( "AERO REFERENCE DENSITY", "1.226" )
+jobfile.writei( "AERO BASIC COORD", 0 )
+jobfile.writec( "AERO FULL/HALF MODEL", "Half Model" )
+jobfile.writei( "AERO CONTROL DEVICE 0", 0 )
+jobfile.writei( "AERO SPLINE 0", 1 )
+jobfile.writec( "AERO SPLINE 1", "spl_1" )
+jobfile.writec( "CELL WRITE", "ON" )
+jobfile.writei( "CELL INPUT 0", 0 )
+jobfile.writec( "FMS WRITE", "ON" )
+jobfile.writei( "FMS INPUT 0", 0 )
+jobfile.writec( "EXEC WRITE", "ON" )
+jobfile.writei( "EXEC INPUT 0", 0 )
+jobfile.writec( "CASE WRITE", "ON" )
+jobfile.writei( "CASE INPUT 0", 0 )
+
+jobfile.writec( "BULK WRITE", "ON" )
+jobfile.writei( "BULK INPUT 0", 3 )
+jobfile.writec( "BULK INPUT 1", "MDLPRM, HDF5,1" )
+jobfile.writec( "BULK INPUT 2", "INCLUDE 'w2gj.bdf'" )
+jobfile.writec( "BULK INPUT 3", "INCLUDE 'Gravity.bdf'" )
+
+$# jobfile.writec( "BULK INPUT 2", "MAXLINES=90000000" )
+
+jobfile.writec( "CELL DTI POSITION", "START" )
+jobfile.writec( "FMS DTI POSITION", "START" )
+jobfile.writec( "EXEC DTI POSITION", "START" )
+jobfile.writec( "CASE DTI POSITION", "START" )
+jobfile.writec( "BULK DTI POSITION", "START" )
+jobfile.writec( "", "END" )
+jobfile.close(  )
+mscnastran_job.associate_subcases( "144", "uCRM", 1, ["aero1"] )
+analysis_submit_2( "MSC.Nastran", "uCRM" )

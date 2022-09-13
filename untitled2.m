@@ -1,0 +1,21 @@
+problem.xl(1:11)    = 5; 
+problem.xl(12:22)   = 4; 
+problem.xl(23:33)   = 4; 
+problem.xl(34:44)   = 3; 
+problem.xl(45:55)   = 1; 
+problem.xl(56:66)   = 0.5; 
+problem.xl(67)      = 0.1;
+problem.xl(68)      = 0.5;
+problem.xl(69)      = 6;
+problem.xl(70)      = 4;
+
+problem.xu(1:11)    = 15; 
+problem.xu(12:22)   = 15 ; 
+problem.xu(23:33)   = 15 ; 
+problem.xu(34:44)   = 15 ; 
+problem.xu(45:55)   = 9 ; 
+problem.xu(56:66)   = 8 ; 
+problem.xu(67)      = 0.4;
+problem.xu(68)      = 0.9;
+problem.xu(69)      = 50;
+problem.xu(70)      = 10;

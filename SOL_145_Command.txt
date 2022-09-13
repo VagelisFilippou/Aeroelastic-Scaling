@@ -1,0 +1,36 @@
+$ MSC.Nastran input file created on March     16, 2022 at 13:15:22 by
+$ Patran 2019
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Aero DB FMS Statements
+$ Direct Text Input for Executive Control
+$ Dynamic Flutter Analysis
+SOL 145
+TIME 6000
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran Aeroelastic job created on 16-Mar-22 at 12:37:44
+ECHO = NONE
+MAXLINES = 5000000
+AECONFIG = AeroSG2D
+SUBCASE 1
+$ Subcase name : Flutter1
+   SUBTITLE=Default
+   METHOD = 1
+   SPC = 2
+   VECTOR(SORT1,REAL)=ALL
+FMETHOD = 1
+AESYMXZ = Symmetric
+AESYMXY = Asymmetric
+$ Direct Text Input for this Subcase
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+MDLPRM, HDF5,1
+INCLUDE 'w2gj.bdf'
+INCLUDE 'Flutter_Cards.bdf'
+INCLUDE 'Gravity.bdf'
+PARAM*   WTMASS         1.
+PARAM*   SNORM          20.
+PARAM*   PRTMAXIM        YES
+EIGRL*   1                                               10
+*        0

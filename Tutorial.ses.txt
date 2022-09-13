@@ -1,0 +1,715 @@
+uil_pref_analysis.set_analysis_preference( "MD Nastran", "Structural", ".bdf", @
+".op2", "Legacy Mapping" )
+$# -----------------------------------------Declare variables-----------------------------------------------
+REAL Span = 30
+REAL AR = 9
+REAL TRatio = 0.2
+REAL Sweep25 = 25
+REAL Dihedral = 6
+REAL Torsion = -3
+REAL Ealum = 69e9
+REAL nialum = 0.3
+REAL rhoalum = 2770
+REAL Esteel = 200e9
+REAL nisteel = 0.3
+REAL rhosteel = 7800
+REAL Etitanium = 120e9
+REAL nititanium = 0.3
+REAL rhotitanium = 4110
+REAL HL = 0.03
+REAL WL = 0.03
+REAL t1L = 0.002
+REAL t2L = 0.002
+REAL offL = 0.01
+REAL Hhat = 0.007
+REAL that = 0.0008
+REAL What = 0.01
+REAL W1hat = 0.003
+REAL offhat = 0.009708
+REAL skinthick = 0.002
+REAL WBskinthick = 0.002
+REAL ribsthick = 0.005
+REAL sparsthick = 0.01
+$# ----------------------------------------Parametric variables---------------------------------------------
+REAL nRibs = 4
+REAL Semispan = `Span/2`
+REAL Cr = `2*Span/AR/(1+TRatio)`
+REAL Zm = `Span/2/(nRibs-1)`
+REAL pi = 3.1415926535
+$# -----------------------------------------------Display-------------------------------------------------------
+ga_viewport_background_set( "default_viewport", 7 )
+ga_display_edgecolor_set( "general", 1 )
+point_color( 1 )
+curve_color( 0 )
+10.1 Annex PCL Code
+surface_color( 4 )
+point_size( 9 )
+ga_display_diffuse_set( "general", 1. )
+$# ------------------------------------------Points of profile.dat--------------------------------------------
+STRING asm_create_grid_xyz_created_ids[VIRTUAL]
+asm_const_grid_xyz( "1", "[ 0.000000 0.017700 0 ] [ 0.002300 0.03090" // @
+"0 0 ] [ 0.005000 0.037200 0 ] [ 0.007600 0.041500 0 ] [ 0.014300 " // @
+" 0.049900 0 ] [ 0.024900 0.058200 0 ] [ 0.049500 0.073000 0 ] [ 0" // @
+".074000 0.081400 0 ] [ 0.099000 0.086600 0 ] [ 0.153000 0.090700 0" // @
+" ] [ 0.196100 0.090500 0 ] [ 0.250400 0.088700 0 ] [ 0.309400 0." // @
+"085800 0 ] [ 0.352000 0.083300 0 ] [ 0.391900 0.080400 0 ] [ 0.44" // @
+"7700 0.075600 0 ] [ 0.503400 0.069600 0 ] [ 0.559300 0.062600 0 ] " // @
+"[ 0.596500 0.057500 0 ] [ 0.648800 0.049800 0 ] [ 0.835100 0.022" // @
+"400 0 ] [ 0.910900 0.013200 0 ] [ 1.000000 0.000300 0 ] [ 0.00000" // @
+"0 0.017700 0 ] [ 0.002200 0.003800 0 ] [ 0.004900 -0.001800 0 ] [ " // @
+" 0.007200 -0.005300 0 ] [ 0.011900 -0.010600 0 ] [ 0.024300 -0.020400" // @
+" 0 ] [ 0.048600 -0.034200 0 ] [ 0.071600 -0.045700 0 ] [ 0.097900 -" // @
+"0.051600 0 ] [ 0.148800 -0.060700 0 ] [ 0.195300 -0.063200 0 ] [ 0." // @
+"250100 -0.063200 0 ] [ 0.294500 -0.062600 0 ] [ 0.357900 -0.061000 0 " // @
+"] [ 0.396500 -0.059500 0 ] [ 0.454300 -0.056300 0 ] [ 0.505000 -0.0" // @
+"52700 0 ] [ 0.555600 -0.048200 0 ] [ 0.606300 -0.042700 0 ] [ 0.648" // @
+"500 -0.037500 0 ] [ 0.831700 -0.014900 0 ] [ 0.941000 -0.005300 0 ] [" // @
+" 1.000000 -0.000300 0 ]", "Coord 0", asm_create_grid_xyz_created_ids )
+$? YESFORALL 1000034
+$# ----------------------------------Delete duplicated points----------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 46 24", asm_delete_any_deleted_ids )
+$# ------------------------------------------B-Spline the profile----------------------------------------------
+STRING sgm_curve_bspline_created_ids[VIRTUAL]
+sgm_const_curve_bspline( "1", "Point 1:9", 5, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+sgm_const_curve_bspline( "2", "Point 9:17", 5, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+sgm_const_curve_bspline( "3", "Point 17:23", 4, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+sgm_const_curve_bspline( "4", "Point 1 25:32", 2, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+sgm_const_curve_bspline( "5", "Point 32:39", 2, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+sgm_const_curve_bspline( "6", "Point 39:45 23", 2, TRUE, 1, FALSE, @
+sgm_curve_bspline_created_ids )
+$# -------------------------------------Delete points but LE and TE-------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 2:22 25:45", asm_delete_any_deleted_ids )
+$# ----------------------------Merge Upper and Lower camber curves------------------------------
+STRING sgm_edit_curve_merg_created_ids[VIRTUAL]
+sgm_edit_curve_merge( "7", "Curve 1:3", 1, 4.9999999E-005, TRUE, @
+sgm_edit_curve_merg_created_ids )
+$? YES 38000217
+sgm_edit_curve_merge( "8", "Curve 4:6", 1, 4.9999999E-005, TRUE, @
+sgm_edit_curve_merg_created_ids )
+$? YES 38000217
+$# --------------------------------Criate vertical curves for the Spars------------------------------
+STRING asm_create_line_xyz_created_ids[VIRTUAL]
+asm_const_line_xyz( "9", "<0 2 0>", "[0.2 -1 0] [0.6 -1 0]", "Coord 0", @
+asm_create_line_xyz_created_ids )
+$# --------------------------------Intersect vertical curves with profile------------------------------
+STRING asm_create_grid_int_created_ids[VIRTUAL]
+asm_const_grid_intersect_v1( "28", "Curve 9 10", "Curve 7 8", @
+asm_create_grid_int_created_ids )
+$# ---------------------------------------Delete vertical curves------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_curve( "Curve 9 10", asm_delete_any_deleted_ids )
+$# --------------------------------Break the profile curves by the points--------------------------
+STRING sgm_curve_break_poi_created_ids[VIRTUAL]
+sgm_edit_curve_break_point( "9", "Point 28:31", "Curve 7 8", TRUE, @
+sgm_curve_break_poi_created_ids )
+$? YES 38000217
+$# ------------------------------------------Verify and Fix------------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 32", asm_delete_any_deleted_ids )
+STRING sgm_curve_break_poi_created_ids[VIRTUAL]
+sgm_edit_curve_break_point( "15", "Point 29", "Curve 10", TRUE, @
+sgm_curve_break_poi_created_ids )
+$? YES 38000217
+STRING sgm_edit_curve_merg_created_ids[VIRTUAL]
+sgm_edit_curve_merge( "17", "Curve 13 14", 1, 4.9999999E-005, TRUE, @
+sgm_edit_curve_merg_created_ids )
+$? YES 38000217
+$# ---------------------------------Create Wingbox limit curves---------------------------------
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( "18", "Point 28", "Point 29", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( "19", "Point 30", "Point 31", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( "20", "Point 28", "Point 30", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( "21", "Point 29", "Point 31", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+$# --------------------------------Criate vertical curves for the Strips------------------------------
+STRING asm_create_line_xyz_created_ids[VIRTUAL]
+asm_const_line_xyz( "22", "<0 2 0>", "[0.333333 -1 0] [0.466667 -1 0]", @
+"Coord 0", asm_create_line_xyz_created_ids )
+$# --------------------------------Intersect vertical curves with profile------------------------------
+STRING asm_create_grid_int_created_ids[VIRTUAL]
+asm_const_grid_intersect_v1( "36", "Curve 22 23", "Curve 18 19", @
+asm_create_grid_int_created_ids )
+$# ---------------------------------------Delete vertical curves------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_curve( "Curve 22 23", asm_delete_any_deleted_ids )
+$# --------------------------------Break the profile curves by the points--------------------------
+STRING sgm_curve_break_poi_created_ids[VIRTUAL]
+sgm_edit_curve_break_point( "22", "Point 36:39", "Curve 18 19", TRUE, @
+sgm_curve_break_poi_created_ids )
+$? YES 38000217
+$# ------------------------------------------Verify and Fix------------------------------------------------
+asm_delete_point( "Point 40", asm_delete_any_deleted_ids )
+sgm_edit_curve_break_point( "28", "Point 37", "Curve 23", TRUE, @
+sgm_curve_break_poi_created_ids )
+$? YES 38000217
+STRING sgm_edit_curve_merg_created_ids[VIRTUAL]
+sgm_edit_curve_merge( "30", "Curve 26 27", 1, 0.00050000002, TRUE, @
+sgm_edit_curve_merg_created_ids )
+$? YES 38000217
+$# --------------------------------Scale the nondimensional profile--------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_scale( "31", "curve", [ `Cr` `Cr` `Cr` ], "[0 0 0]", "Coord 0", @
+1, TRUE, "Curve 9 11 12 15:17 20:22 24 25 28:30", @
+sgm_transform_curve_created_ids )
+$? YES 38000217
+$# --------------------------------------Delete all Points-----------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 1 23 28:31 36:49", asm_delete_any_deleted_ids )
+$# --------------------------------------Renumber all curves------------------------------------------
+STRING sgm_renum_curve_new_ids[VIRTUAL]
+sgm_renumber( 1, "curve", "1", "Curve 31", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "2", "Curve 39", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "3", "Curve 42", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "4", "Curve 43", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "5", "Curve 35", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "6", "Curve 32", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "7", "Curve 40", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "8", "Curve 41", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "9", "Curve 44", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "10", "Curve 36", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "11", "Curve 34", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "12", "Curve 33", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "13", "Curve 37", sgm_renum_curve_new_ids )
+repaint_graphics( )
+sgm_renumber( 1, "curve", "14", "Curve 38", sgm_renum_curve_new_ids )
+repaint_graphics( )
+$# ------------------------------------------Wing Creation---------------------------------------------------
+$# ---------------------------------------------Create the other Ribs--------------------------------------
+Real i1 = 1
+Real i2 = 2
+Real i3 = 3
+Real i4 = 4
+$# ---------------------------------------------------RIB 2---------------------------------------------------------
+$# --------------------------------------------------Scale---------------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_scale( "15", "curve", [ `1-(1-TRatio)*(i2-1)/(nRibs-1)` `1-( @
+1-TRatio)*(i2-1)/(nRibs-1)` `1-(1-TRatio)*(i2-1)/(nRibs-1)` ], "[0 0 0]", @
+"Coord 0", 1, FALSE, "Curve 1:14", sgm_transform_curve_created_ids )
+$# --------------------------------------------------Translate-----------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_translate_v1( "29", "curve", @
+"<`(i2-1)*Zm*(mth_tanr(Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio)))` `(i2-1)" // @
+"*Zm*mth_tand(Dihedral)` `(i2-1)*Zm`>", `mth_sqrt(((i2-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))*((i2-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))+((i2-1)*Zm*mth_tand(Dihedral))*(( @
+i2-1)*Zm*mth_tand(Dihedral))+((i2-1)*Zm)*((i2-1)*Zm))`, FALSE, "Coord 0", 1, @
+TRUE, "Curve 15:28", sgm_transform_curve_created_ids )
+$? YES 38000217
+$# ------------------------------------------------------Rotate---------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_rotate( "43", "curve", "{[`(i2-1)*Zm*(mth_tanr(Sweep25*pi/1" // @
+"80)+(1-TRatio)/(AR*(1+TRatio)))` `(i2-1)*Zm*mth_tand(Dihedral)` `(i2-1)*Zm`] " // @
+"[0 0 1]}", `(i2-1)*Zm/(Semispan)*Torsion`, 0., "Coord 0", 1, TRUE, @
+"Curve 29:42", sgm_transform_curve_created_ids )
+$? YES 38000217
+repaint_graphics( )
+$# ---------------------------------------------------RIB 3---------------------------------------------------------
+$# --------------------------------------------------Scale---------------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_scale( "57", "curve", [ `1-(1-TRatio)*(i3-1)/(nRibs-1)` `1-( @
+1-TRatio)*(i3-1)/(nRibs-1)` `1-(1-TRatio)*(i3-1)/(nRibs-1)` ], "[0 0 0]", @
+"Coord 0", 1, FALSE, "Curve 1:14", sgm_transform_curve_created_ids )
+$# --------------------------------------------------Translate-----------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_translate_v1( "71", "curve", @
+"<`(i3-1)*Zm*(mth_tanr(Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio)))` `(i3-1)" // @
+"*Zm*mth_tand(Dihedral)` `(i3-1)*Zm`>", `mth_sqrt(((i3-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))*((i3-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))+((i3-1)*Zm*mth_tand(Dihedral))*(( @
+i3-1)*Zm*mth_tand(Dihedral))+((i3-1)*Zm)*((i3-1)*Zm))`, FALSE, "Coord 0", 1, @
+TRUE, "Curve 57:70", sgm_transform_curve_created_ids )
+$? YES 38000217
+$# ------------------------------------------------------Rotate---------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_rotate( "85", "curve", "{[`(i3-1)*Zm*(mth_tanr(Sweep25*pi/1" // @
+"80)+(1-TRatio)/(AR*(1+TRatio)))` `(i3-1)*Zm*mth_tand(Dihedral)` `(i3-1)*Zm`] " // @
+"[0 0 1]}", `(i3-1)*Zm/(Semispan)*Torsion`, 0., "Coord 0", 1, TRUE, @
+"Curve 71:84", sgm_transform_curve_created_ids )
+$? YES 38000217
+repaint_graphics( )
+$# ---------------------------------------------------RIB 4---------------------------------------------------------
+$# --------------------------------------------------Scale---------------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_scale( "99", "curve", [ `1-(1-TRatio)*(i4-1)/(nRibs-1)` `1-( @
+1-TRatio)*(i4-1)/(nRibs-1)` `1-(1-TRatio)*(i4-1)/(nRibs-1)` ], "[0 0 0]", @
+"Coord 0", 1, FALSE, "Curve 1:14", sgm_transform_curve_created_ids )
+$# --------------------------------------------------Translate-----------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_translate_v1( "113", "curve", @
+"<`(i4-1)*Zm*(mth_tanr(Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio)))` `(i4-1)" // @
+"*Zm*mth_tand(Dihedral)` `(i4-1)*Zm`>", `mth_sqrt(((i4-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))*((i4-1)*Zm*(mth_tanr( @
+Sweep25*pi/180)+(1-TRatio)/(AR*(1+TRatio))))+((i4-1)*Zm*mth_tand(Dihedral))*(( @
+i4-1)*Zm*mth_tand(Dihedral))+((i4-1)*Zm)*((i4-1)*Zm))`, FALSE, "Coord 0", 1, @
+TRUE, "Curve 99:112", sgm_transform_curve_created_ids )
+$? YES 38000217
+$# ------------------------------------------------------Rotate---------------------------------------------------
+STRING sgm_transform_curve_created_ids[VIRTUAL]
+sgm_transform_rotate( "127", "curve", "{[`(i4-1)*Zm*(mth_tanr(Sweep25*pi/1" // @
+"80)+(1-TRatio)/(AR*(1+TRatio)))` `(i4-1)*Zm*mth_tand(Dihedral)` `(i4-1)*Zm`] " // @
+"[0 0 1]}", `(i4-1)*Zm/(Semispan)*Torsion`, 0., "Coord 0", 1, TRUE, @
+"Curve 113:126", sgm_transform_curve_created_ids )
+$? YES 38000217
+repaint_graphics( )
+$# ------------------------------------------------Delete all points-------------------------------------------
+STRING asm_delete_any_deleted_ids[VIRTUAL]
+asm_delete_point( "Point 11 21:29 40 50:58 69 79:87", @
+asm_delete_any_deleted_ids )
+repaint_graphics( )
+$# ---------------------------------------------Create the Srip curves--------------------------------------
+STRING asm_line_2point_created_ids[VIRTUAL]
+asm_const_line_2point( " 141 ", "Curve 1.1 ", "Curve 43.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 142 ", "Curve 43.1 ", "Curve 85.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 143 ", "Curve 85.1 ", "Curve 127.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 144 ", "Curve 11.1 ", "Curve 53.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 145 ", "Curve 53.1 ", "Curve 95.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 146 ", "Curve 95.1 ", "Curve 137.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 147 ", "Curve 3.1 ", "Curve 45.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 148 ", "Curve 45.1 ", "Curve 87.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 149 ", "Curve 87.1 ", "Curve 129.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 150 ", "Curve 4.1 ", "Curve 46.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 151 ", "Curve 46.1 ", "Curve 88.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 152 ", "Curve 88.1 ", "Curve 130.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 153 ", "Curve 5.1 ", "Curve 47.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 154 ", "Curve 47.1 ", "Curve 89.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 155 ", "Curve 89.1 ", "Curve 131.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 156 ", "Curve 10.2 ", "Curve 52.2 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 157 ", "Curve 52.2 ", "Curve 94.2 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 158 ", "Curve 94.2 ", "Curve 136.2 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 159 ", "Curve 12.1 ", "Curve 54.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 160 ", "Curve 54.1 ", "Curve 96.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 161 ", "Curve 96.1 ", "Curve 138.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 162 ", "Curve 8.1 ", "Curve 50.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 163 ", "Curve 50.1 ", "Curve 92.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 164 ", "Curve 92.1 ", "Curve 134.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 165 ", "Curve 9.1 ", "Curve 51.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 166 ", "Curve 51.1 ", "Curve 93.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 167 ", "Curve 93.1 ", "Curve 135.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 168 ", "Curve 10.1 ", "Curve 52.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 169 ", "Curve 52.1 ", "Curve 94.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+asm_const_line_2point( " 170 ", "Curve 94.1 ", "Curve 136.1 ", 0, "", 50., 1, @
+asm_line_2point_created_ids )
+$# ---------------------------------------------Create Ribs surfaces---------------------------------------
+STRING sgm_surface_trimmed__created_id[VIRTUAL]
+sgm_create_surface_trimmed_v1( "1", "Curve 1 11 5 10 12 6", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+sgm_create_surface_trimmed_v1( "2", "Curve 43 53 47 52 54 48", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+sgm_create_surface_trimmed_v1( "3", "Curve 85 95 89 94 96 90", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+sgm_create_surface_trimmed_v1( "4", "Curve 127 137 131 136 138 132", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+$# ---------------------------------------------Create Spars surfaces---------------------------------------
+STRING sgm_surface_trimmed__created_id[VIRTUAL]
+sgm_create_surface_trimmed_v1( "5", "Curve 13 144:146 139 161:159:-1", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+sgm_create_surface_trimmed_v1( "6", "Curve 14 153:155 140 170:168:-1", "", "", @
+FALSE, TRUE, TRUE, TRUE, sgm_surface_trimmed__created_id )
+$# ---------------------------------------------Create WB skin surfaces------------------------------------
+STRING sgm_surface_4edge_created_ids[VIRTUAL]
+sgm_const_surface_4edge( " 7 ", "Curve 144 ", "Curve 2 ", "Curve 147 ", @
+"Curve 44 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 8 ", "Curve 145 ", "Curve 44 ", "Curve 148 ", @
+"Curve 86 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 9 ", "Curve 146 ", "Curve 86 ", "Curve 149 ", @
+"Curve 128 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 10 ", "Curve 147 ", "Curve 3 ", "Curve 150 ", @
+"Curve 45 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 11 ", "Curve 148 ", "Curve 45 ", "Curve 151 ", @
+"Curve 87 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 12 ", "Curve 149 ", "Curve 87 ", "Curve 152 ", @
+"Curve 129 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 13 ", "Curve 150 ", "Curve 4 ", "Curve 153 ", @
+"Curve 46 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 14 ", "Curve 151 ", "Curve 46 ", "Curve 154 ", @
+"Curve 88 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 15 ", "Curve 152 ", "Curve 88 ", "Curve 155 ", @
+"Curve 130 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 16 ", "Curve 159 ", "Curve 7 ", "Curve 162 ", @
+"Curve 49 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 17 ", "Curve 160 ", "Curve 49 ", "Curve 163 ", @
+"Curve 91 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 18 ", "Curve 161 ", "Curve 91 ", "Curve 164 ", @
+"Curve 133 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 19 ", "Curve 162 ", "Curve 8 ", "Curve 165 ", @
+"Curve 50 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 20 ", "Curve 163 ", "Curve 50 ", "Curve 166 ", @
+"Curve 92 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 21 ", "Curve 164 ", "Curve 92 ", "Curve 167 ", @
+"Curve 134 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 22 ", "Curve 165 ", "Curve 9 ", "Curve 168 ", @
+"Curve 51 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 23 ", "Curve 166 ", "Curve 51 ", "Curve 169 ", @
+"Curve 93 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 24 ", "Curve 167 ", "Curve 93 ", "Curve 170 ", @
+"Curve 135 ", sgm_surface_4edge_created_ids )
+$# ------------------------------------Create Upper Camber skin surfaces-------------------------------
+sgm_const_surface_4edge( " 25 ", "Curve 1 ", "Curve 141 ", "Curve 43 ", @
+"Curve 144 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 26 ", "Curve 43 ", "Curve 142 ", "Curve 85 ", @
+"Curve 145 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 27 ", "Curve 85 ", "Curve 143 ", "Curve 127 ", @
+"Curve 146 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 28 ", "Curve 11 ", "Curve 144 ", "Curve 53 ", @
+"Curve 153 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 29 ", "Curve 53 ", "Curve 145 ", "Curve 95 ", @
+"Curve 154 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 30 ", "Curve 95 ", "Curve 146 ", "Curve 137 ", @
+"Curve 155 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 31 ", "Curve 5 ", "Curve 153 ", "Curve 47 ", @
+"Curve 156 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 32 ", "Curve 47 ", "Curve 154 ", "Curve 89 ", @
+"Curve 157 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 33 ", "Curve 89 ", "Curve 155 ", "Curve 131 ", @
+"Curve 158 ", sgm_surface_4edge_created_ids )
+$# ------------------------------------Create Lower Camber skin surfaces---------------------------------
+sgm_const_surface_4edge( " 34 ", "Curve 6 ", "Curve 141 ", "Curve 48 ", @
+"Curve 159 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 35 ", "Curve 48 ", "Curve 142 ", "Curve 90 ", @
+"Curve 160 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 36 ", "Curve 90 ", "Curve 143 ", "Curve 132 ", @
+"Curve 161 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 37 ", "Curve 12 ", "Curve 159 ", "Curve 54 ", @
+"Curve 168 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 38 ", "Curve 54 ", "Curve 160 ", "Curve 96 ", @
+"Curve 169 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 39 ", "Curve 96 ", "Curve 161 ", "Curve 138 ", @
+"Curve 170 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 40 ", "Curve 10 ", "Curve 168 ", "Curve 52 ", @
+"Curve 156 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 41 ", "Curve 52 ", "Curve 169 ", "Curve 94 ", @
+"Curve 157 ", sgm_surface_4edge_created_ids )
+sgm_const_surface_4edge( " 42 ", "Curve 94 ", "Curve 170 ", "Curve 136 ", @
+"Curve 158 ", sgm_surface_4edge_created_ids )
+$# ------------------------------------------------Ajust View-----------------------------------------------------
+ga_view_aa_set( -168, -10, 165 )
+ga_view_zoom_set( 3.5)
+repaint_graphics( )
+$# ------------------------------------------------------------------------------------------------------------------
+$# --------------------------------------------Create Materials-----------------------------------------------
+$# --------------------------------------------ALUMINIUM----------------------------------------------------
+material.create( "Analysis code ID", 1, "Analysis type ID", 1, "Alum", 0, @
+"Date: 14-Apr-11 Time: 16:25:54", "Isotropic", 1, "Directionality", @
+1, "Linearity", 1, "Homogeneous", 0, "Linear Elastic", 1, @
+"Model Options & IDs", ["", "", "", "", ""], [0, 0, 0, 0, 0], "Active Flag", @
+1, "Create", 10, "External Flag", FALSE, "Property IDs", ["Elastic Modulus", @
+"Poisson Ratio", "Density"], [2, 5, 16, 0], "Property Values", ["`Ealum`", "`nialum`", @
+"`rhoalum`", ""] )
+$# --------------------------------------------------STEEL----------------------------------------------------
+material.create( "Analysis code ID", 1, "Analysis type ID", 1, "Steel", 0, @
+"Date: 14-Apr-11 Time: 16:25:54", "Isotropic", 1, "Directionality", @
+1, "Linearity", 1, "Homogeneous", 0, "Linear Elastic", 1, @
+"Model Options & IDs", ["", "", "", "", ""], [0, 0, 0, 0, 0], "Active Flag", @
+1, "Create", 10, "External Flag", FALSE, "Property IDs", ["Elastic Modulus", @
+"Poisson Ratio", "Density"], [2, 5, 16, 0], "Property Values", ["`Esteel`", "`nisteel`" @
+, "`rhosteel`", ""] )
+$# --------------------------------------------TITANIUM----------------------------------------------------
+material.create( "Analysis code ID", 1, "Analysis type ID", 1, "Titanium", 0, @
+"Date: 14-Apr-11 Time: 16:25:54", "Isotropic", 1, "Directionality", @
+1, "Linearity", 1, "Homogeneous", 0, "Linear Elastic", 1, @
+"Model Options & IDs", ["", "", "", "", ""], [0, 0, 0, 0, 0], "Active Flag", @
+1, "Create", 10, "External Flag", FALSE, "Property IDs", ["Elastic Modulus", @
+"Poisson Ratio", "Density"], [2, 5, 16, 0], "Property Values", ["`Etitanium`", "`nititanium`" @
+, "`rhotitanium`", ""] )
+$# ------------------------------------------------------------------------------------------------------------------
+$# --------------------------------------------Create Properties---------------------------------------------
+$# -------------------------------------------L-BEAM STRIPS----------------------------------------------
+beam_section_create( "L_Beam_StripsWB", "L", ["`HL`", "`WL`", "`t1L`", "`t2L`" @
+] )
+$# -------------------------------------------HAT-BEAM STRIPS----------------------------------------------
+beam_section_create( "Hat_Beam_StripsWB", "HAT", ["`Hhat`", "`that`", "`What`", @
+"`W1hat`"] )
+$# -----------------------------------------------SHELL SKIN----------------------------------------------
+elementprops_create( "ShellSkin", 51, 25, 35, 1, 1, 20, [13, 20, 36, 4037, 4111, @
+4118, 4119], [5, 9, 1, 1, 1, 1, 1], ["m:Alum", "", "`skinthick`", "", "", "", @
+""], "Surface 25:42" )
+$# --------------------------------------SHELL SPARS-----------------------------------------------------
+elementprops_create( "ShellSpars", 51, 25, 35, 1, 1, 20, [13, 20, 36, 4037, @
+4111, 4118, 4119], [5, 9, 1, 1, 1, 1, 1], ["m:Titanium", "", "`sparsthick`", "", "", @
+"", ""], "Surface 5 6" )
+$# --------------------------------------SHELL SKIN SUP/INF WB-------------------------------------
+elementprops_create( "ShellSkinWB", 51, 25, 35, 1, 1, 20, [13, 20, 36, 4037, @
+4111, 4118, 4119], [5, 9, 1, 1, 1, 1, 1], ["m:Alum", "", "`WBskinthick`", "", @
+"", "", ""], "Surface 7:24" )
+$# -------------------------------------------SHELL RIBS----------------------------------------------------
+elementprops_create( "ShellRibs", 51, 25, 35, 1, 1, 20, [13, 20, 36, 4037, @
+4111, 4118, 4119], [5, 9, 1, 1, 1, 1, 1], ["m:Alum", "", "`ribsthick`", "", "", "", @
+""], "Surface 1:4" )
+$# ------------------------------------------------Create Hat Strips-----------------------------------------
+elementprops_create( "SupWBStrips", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, @
+4043, 2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, @
+4051, 4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], [ @
+"Hat_Beam_StripsWB", "m:Steel", "<0 -1 0>", "<0 `-offhat` 0>", "<0 `-offhat` 0>", "1", @
+"1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", @
+"Analysis", "Analysis", "Analysis"], "" )
+elementprops_create( "InfWBStrips", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, @
+4043, 2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, @
+4051, 4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], [ @
+"Hat_Beam_StripsWB", "m:Steel", "<0 1 0>", "<0 `offhat` 0>", "<0 `offhat` 0>", "1", @
+"1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", @
+"", ""], "" )
+$# ------------------------------------------------Create L Strips--------------------------------------------
+elementprops_create( "FLStrip", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043, @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051, @
+4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], ["L_Beam_StripsWB", @
+"m:Steel", "<1 0 0>", "<`offL` `offL` 0>", "<`offL` `offL` 0>", "1", "1", "", "", "", "", "", "", @
+"", "", "", "", "", "", "", "", "", "", "", "", "", ""], "" )
+elementprops_create( "FUStrip", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043, @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051, @
+4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], ["L_Beam_StripsWB", @
+"m:Steel", "<0 -1 0>", "<`offL` `-offL` 0>", "<`offL` `-offL` 0>", "1", "1", "", "", "", "", "", "", @
+"", "", "", "", "", "", "", "", "", "", "", "", "", ""], "" )
+elementprops_create( "BLStrip", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043, @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051, @
+4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], ["L_Beam_StripsWB", @
+"m:Steel", "<0 1 0>", "<`-offL` `offL` 0>", "<`-offL` `offL` 0>", "1", "1", "", "", "", "", "", "", @
+"", "", "", "", "", "", "", "", "", "", "", "Analysis", "Analysis", "Analysis" @
+], "" )
+elementprops_create( "BUStrip", 11, 2, 42, 1, 1, 20, [39, 13, 6, 4042, 4043, @
+2047, 2048, 1, 10, 11, 4026, 1026, 4044, 4045, 4037, 4047, 4048, 4050, 4051, @
+4053, 4054, 4056, 4057, 4061, 8200, 8201, 8202], [11, 5, 2, 2, 2, 4, 4, 1, 1, @
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 4, 4, 4], ["L_Beam_StripsWB", @
+"m:Steel", "<-1 0 0>", "<`-offL` `-offL` 0>", "<`-offL` `-offL` 0>", "1", "1", "", "", "", "", "", "", @
+"", "", "", "", "", "", "", "", "", "", "", "", "", ""], "" )
+repaint_graphics( )
+$# ------------------------------------------------MESHING---------------------------------------------------
+$# ---------------------------------------------Group Creation---------------------------------------------
+repaint_graphics( )
+sys_poll_option( 2 )
+ga_group_create( "Frame" )
+ga_group_entity_add( "Frame", "Curve 1:207" )
+ga_group_create( "Ribs" )
+ga_group_entity_add( "Ribs", "Surface 1:4 Curve 1 11 5 6 12 10 " // @
+"127 137 131 132 138 136 141:143 156:158" )
+ga_group_create( "Spars" )
+ga_group_entity_add( "Spars", "Surface 5 6 Curve 1 11 5 6 12 10 " // @
+"127 137 131 132 138 136 141:143 156:158" )
+ga_group_create( "Sup Skin" )
+ga_group_entity_add( "Sup Skin", "Surface 25:33 Curve 1 11 5 6 12 10 " // @
+"127 137 131 132 138 136 141:143 156:158" )
+ga_group_create( "Inf Skin" )
+ga_group_entity_add( "Inf Skin", "Surface 34:42 Curve 1 11 5 6 12 10 " // @
+"127 137 131 132 138 136 141:143 156:158" )
+ga_group_create( "WB Skin" )
+ga_group_entity_add( "WB Skin", "Surface 7:24 Curve 1 11 5 6 12 10 " // @
+"127 137 131 132 138 136 141:143 156:158" )
+ga_group_create( "Exterior" )
+ga_group_entity_add( "Exterior", "Surface 1 4 25:42" )
+ga_group_create( "MSeed" )
+ga_group_entity_add( "MSeed", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+ga_group_create( "MStrips" )
+ga_group_entity_add( "MStrips", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+ga_group_create( "MSpars" )
+ga_group_entity_add( "MSpars", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+ga_group_create( "MRibs" )
+ga_group_entity_add( "MRibs", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+ga_group_create( "MWB" )
+ga_group_entity_add( "MWB", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+ga_group_create( "MSkin" )
+ga_group_entity_add( "MSkin", "Curve 1 11 5 6 12 10 127 137 131 132 138 136 14" // @
+"1:143 156:158" )
+$# ----------------------------------------------------Criate Mesh Seed-------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MSeed"] )
+repaint_graphics( )
+ui_exec_function( "mesh_seed_display_mgr", "init" )
+mesh_seed_create( "Curve 144:155", 1, 31, 0., 0., 0. )
+mesh_seed_create( "Curve 159:170", 1, 31, 0., 0., 0. )
+mesh_seed_display_mgr.refresh( )
+$# ------------------------------Mesh WB Skin Hat-Strips------------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MStrips"] )
+repaint_graphics( )
+ui_exec_function( "mesh_seed_display_mgr", "init" )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 147:152", 16384, 0.54812503, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "SupWBStrips", "1:186", 186 )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 162:167", 16384, 0.55001199, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "InfWBStrips", "187:372", 186 )
+$# ------------------------------Mesh WB corner L-Strips-------------------------------------------
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 144:146", 16384, 0.55628097, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "FUStrip", "373:465", 93 )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 159:161", 16384, 0.55833501, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "FLStrip", "466:558", 93 )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 153:155", 16384, 0.53370899, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "BUStrip", "559:651", 93 )
+INTEGER fem_create_mesh_curve_num_nodes
+INTEGER fem_create_mesh_curve_num_elems
+STRING fem_create_mesh_c_nodes_created[VIRTUAL]
+STRING fem_create_mesh_c_elems_created[VIRTUAL]
+fem_create_mesh_curv_1( "Curve 168:170", 16384, 0.53517598, "Bar2", "#", "#", @
+"Coord 0", "Coord 0", fem_create_mesh_curve_num_nodes, @
+fem_create_mesh_curve_num_elems, fem_create_mesh_c_nodes_created, @
+fem_create_mesh_c_elems_created )
+fem_associate_elems_to_ep( "BLStrip", "652:744", 93 )
+$# ---------------------------------------------Mesh Ribs-------------------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MRibs"] )
+repaint_graphics( )
+INTEGER fem_create_mesh_surfa_num_nodes
+INTEGER fem_create_mesh_surfa_num_elems
+STRING fem_create_mesh_s_nodes_created[VIRTUAL]
+STRING fem_create_mesh_s_elems_created[VIRTUAL]
+fem_create_mesh_surf_4( "Paver", 49680, "Surface 1:4", 4, ["0.210624", "0.1", @
+"0.2", "1.0"], "Tria3", "#", "#", "Coord 0", "Coord 0", @
+fem_create_mesh_surfa_num_nodes, fem_create_mesh_surfa_num_elems, @
+fem_create_mesh_s_nodes_created, fem_create_mesh_s_elems_created )
+fem_associate_elems_to_ep( "ShellRibs", "745:1090", 346 )
+$# -------------------------------------------Mesh Spars-------------------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MSpars"] )
+repaint_graphics( )
+INTEGER fem_create_mesh_surfa_num_nodes
+INTEGER fem_create_mesh_surfa_num_elems
+STRING fem_create_mesh_s_nodes_created[VIRTUAL]
+STRING fem_create_mesh_s_elems_created[VIRTUAL]
+fem_create_mesh_surf_4( "Paver", 49680, "Surface 5 6", 4, ["0.197665", "0.1", @
+"0.2", "1.0"], "Tria3", "#", "#", "Coord 0", "Coord 0", @
+fem_create_mesh_surfa_num_nodes, fem_create_mesh_surfa_num_elems, @
+fem_create_mesh_s_nodes_created, fem_create_mesh_s_elems_created )
+fem_associate_elems_to_ep( "ShellSpars", "1091:2009", 919 )
+$# ------------------------------------------Mesh WB Skin----------------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MWB"] )
+repaint_graphics( )
+INTEGER fem_create_mesh_surfa_num_nodes
+INTEGER fem_create_mesh_surfa_num_elems
+STRING fem_create_mesh_s_nodes_created[VIRTUAL]
+STRING fem_create_mesh_s_elems_created[VIRTUAL]
+fem_create_mesh_surf_4( "IsoMesh", 49152, "Surface 7:24", 1, ["0.215789"], @
+"Tria3", "#", "#", "Coord 0", "Coord 0", fem_create_mesh_surfa_num_nodes, @
+fem_create_mesh_surfa_num_elems, fem_create_mesh_s_nodes_created, @
+fem_create_mesh_s_elems_created )
+fem_associate_elems_to_ep( "ShellSkinWB", "2010:5357", 3348 )
+$# ---------------------------------------------Mesh Skin-------------------------------------------------
+sys_poll_option( 0 )
+uil_viewport_post_groups.posted_groups( "default_viewport", 1, ["MSkin"] )
+repaint_graphics( )
+INTEGER fem_create_mesh_surfa_num_nodes
+INTEGER fem_create_mesh_surfa_num_elems
+STRING fem_create_mesh_s_nodes_created[VIRTUAL]
+STRING fem_create_mesh_s_elems_created[VIRTUAL]
+fem_create_mesh_surf_4( "IsoMesh", 49152, "Surface 25:42", 1, ["0.545808"], @
+"Tria3", "#", "#", "Coord 0", "Coord 0", fem_create_mesh_surfa_num_nodes, @
+fem_create_mesh_surfa_num_elems, fem_create_mesh_s_nodes_created, @
+fem_create_mesh_s_elems_created )
+fem_associate_elems_to_ep( "ShellSkin", "5358:13441", 8084 )
+$# ------------------------------------------Verify Equivalence------------------------------------------
+mesh_seed_display_mgr.erase( )
+REAL fem_equiv_all_x_equivtol_ab
+INTEGER fem_equiv_all_x_segment
+fem_equiv_all_group4( [" "], 0, "", 1, 1, 0.0049999999, FALSE, @
+fem_equiv_all_x_equivtol_ab, fem_equiv_all_x_segment )
+repaint_graphics( )
+$# ----------------------------------------------------Fix------------------------------------------------------
+loadsbcs_create2( "Fix", "Displacement", "Nodal", "", "Static", ["Surface 1"], @
+"Geometry", "Coord 0", "1.", ["<0 0 0>", "<0 0 0>", "< >", "< >"], [ @
+"", "", "", ""] )
+$# ----------------------------------------------------Force----------------------------------------------------
+loadsbcs_create2( "Force", "Force", "Nodal", "", "Static", ["Point 8"], @
+"Geometry", "Coord 0", "1.", ["< 50 1000 0 >", "< -50 0 -50 >", "< >", @
+"< >"], ["", "", "", ""] )
+$# --------------------------------------------------Visualization---------------------------------------------
+uil_viewport_post_groups.posted_groups( "default_viewport", 7, ["Frame", @
+"MRibs", "MSeed", "MSkin", "MSpars", "MStrips", "MWB"] )
+ga_group_current_set("Frame")
+sys_poll_option( 0 )
+uil_toolbar.shaded_smooth( )
+ga_view_aa_set( -168, -10, 165 )
+ga_view_zoom_set( 3.5)
+repaint_graphics( )
